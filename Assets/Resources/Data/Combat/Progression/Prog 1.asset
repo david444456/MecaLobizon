@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e325c45987a852a49b3a2bcf6e850418, type: 3}
+  m_Name: Prog 1
+  m_EditorClassIdentifier: 
+  characterClasses:
+  - character: 1
+    abilitiesCharacters:
+    - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
+    - {fileID: 11400000, guid: 5d05e65b45a82c94abcb5180b5cb5f53, type: 2}
+    - {fileID: 11400000, guid: 7df840a14d0c15d419d05d9c16d0f366, type: 2}
+    - {fileID: 11400000, guid: 70970b40b7e64e74f89d677dae0e956a, type: 2}
+    - {fileID: 11400000, guid: 905ce13f5def74041bada209078a4475, type: 2}
+    stats:
+    - stat: 0
+      levels:
+      - 15
+      - 25
+      - 35
+      - 45
+      - 50
+    - stat: 2
+      levels:
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+    - stat: 1
+      levels:
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+  - character: 0
+    abilitiesCharacters: []
+    stats: []
+  - character: 0
+    abilitiesCharacters: []
+    stats: []

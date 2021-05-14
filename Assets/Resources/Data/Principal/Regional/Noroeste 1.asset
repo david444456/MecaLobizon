@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Noroeste 1
+  m_EditorClassIdentifier: 
+  TextInEvent: "Ekeko\nCaminar por la puna no es cosa de cualquier d\xEDa. El sol
+    radiante que calienta las espaldas, el ardiente viento que barre el suelo, y
+    la altura que ahoga no son muy acogedores para aquellos que provienen de otros
+    pagos. Sin embargo, tambi\xE9n es el hogar de seres llenos de gozo y dicha. Prontamente
+    te encuentras con uno, el Ekeko, un dios de la abundancia, las lluvias y la fortuna,
+    que pasea con su enorme mochila, cargada de objetos, tesoros, y bienes. Te saluda
+    amablemente, y te pregunta si no ten\xE9s comida, bebida, y un cigarro. Ten\xE9s,
+    pero los suficientes para vos."
+  textConfirmButton: "El Ekeko agradece tu generosidad, y te promete que recibir\xE1s
+    todo lo que so\xF1aste, antes de desaparecer. Vaya, una hermosa promesa, \xA1pero
+    a\xFAn sigues dando vueltas por las alturas! Tal es tu ofuscaci\xF3n, que no
+    notas que tienes en tu bolsillo algunas monedas extra.\n*Esta opci\xF3n aumenta
+    tus monedas en 15.*"
+  textDeclineButton: "Esa actitud no le cay\xF3 muy bien al Ekeko. Sin embargo, entiende
+    tambi\xE9n tu situaci\xF3n, y esta vez, lo dejar\xE1 pasar. \xA1Pero m\xE1s vale
+    que la pr\xF3xima, al menos lleves un cigarro extra!\r\nEsta opci\xF3n no arroja
+    consecuencias negativas ni positivas\r"
+  textFirstButton: Ofrecerle alimento, bebida y un cigarro
+  textSecondButton: Negarte, y continuar tu camino
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 15
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

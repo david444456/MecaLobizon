@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Patagonia 2
+  m_EditorClassIdentifier: 
+  TextInEvent: "Chelcura\r\nNo sabes si es un juego de la luz y las sombras, la locura
+    que lo invade a uno cuando se encuentra tantos d\xEDas transitando un desierto,
+    o si de verdad aquellas piedras en el camino tienen rostro. La perplejidad da
+    paso a la sorpresa cuando te das cuenta que es lo tercero, al momento en el cual
+    una de esas piedras comienza a hablarte. Al parecer, quiere que te acerques.
+    Seg\xFAn dice, tiene un secreto que contarte.\r\n"
+  textConfirmButton: "La piedra con rostro result\xF3 ser un chelcura, y por tu tiempo
+    y amabilidad, te indica el camino hacia un atajo. Gracias a eso, logras esquivar
+    una guarida de huecuvas, y llegas a salvo al pr\xF3ximo pueblo.\r\n*Esta opci\xF3n
+    aumenta el contador de movimientos en 1.\r\n"
+  textDeclineButton: " El esp\xEDritu que habita en la piedra con rostro, que result\xF3
+    ser un chelcura, se indigna por no haberle pedido permiso para circular por sus
+    tierras, y te lanza un maleficio, \xA1que te desorienta y hace que camines en
+    c\xEDrculos por d\xEDas!\r\n*Esta opci\xF3n reduce el contador de movimiento
+    en 1\n"
+  textFirstButton: Escuchar al rostro de piedra
+  textSecondButton: Ignorar el llamado.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 3
+  healthTrue: 1
+  healthFalse: -1
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

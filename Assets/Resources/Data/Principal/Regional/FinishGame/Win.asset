@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Win
+  m_EditorClassIdentifier: 
+  TextInEvent: Ganaste sos un crack
+  textConfirmButton: chau
+  textDeclineButton: 'chau
+
+'
+  textFirstButton: Tengo el dinero.
+  textSecondButton: Continuar tu camino.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 4
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}
