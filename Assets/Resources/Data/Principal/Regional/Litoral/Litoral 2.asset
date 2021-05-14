@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Litoral 2
+  m_EditorClassIdentifier: 
+  TextInEvent: "Ang\xFCery\r\nCaminar por los Esteros del Iber\xE1 es una tarea ardua,
+    pero necesaria si uno quiere evadir las grandes concentraciones de personas.
+    Y teniendo en cuenta tu condici\xF3n, eso parece lo m\xE1s sensato. Est\xE1s
+    atento, ya que cuando uno menos lo espere, puede aparecer un yacar\xE9, una yarar\xE1
+    o un yaguaret\xE9. Sin embargo, no esper\xE1s que lo que se cruzara en tu camino
+    fuera un ang\xFCery, una entidad oscura que posee el alma de las personas cuando
+    mueren. \xA1Ten\xE9s que intentar ahuyentarlo!"
+  textConfirmButton: "\xA1Sos un lobiz\xF3n, una bestia temible! \xBFQu\xE9 mejor
+    que tu rugido y aullido para ahuyentar a cualquier criatura? Sin embargo, esto
+    no parece ser suficiente para amedrentar al ang\xFCery, y no te queda m\xE1s
+    que huir. \xA1Pero que nadie se entere! No queremos que los duendes se r\xEDan
+    de vos."
+  textDeclineButton: "Una vez un cham\xE1n te cont\xF3 que la mejor arma contra un
+    ang\xFCery era una carcajada sincera. Y acabas de comprobar que lo que te dijo
+    no era mentira. \xA1Lograste ahuyentar a un esp\xEDritu maligno con el poder
+    de la risa!."
+  textFirstButton: Rugir y aullar.
+  textSecondButton: Lanzar una carcajada.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 3
+  healthTrue: 1
+  healthFalse: 0
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

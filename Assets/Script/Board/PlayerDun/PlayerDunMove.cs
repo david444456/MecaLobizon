@@ -31,6 +31,10 @@ namespace Board
             return realWayToPlayer[index];
         }
 
+        public Quaternion GetRotationPlayer() {
+            return transform.rotation;
+        }
+
         public override void NewMovementPlayer(int value)
         {
             newMovement = true;
@@ -70,17 +74,32 @@ namespace Board
             if (realWayToPlayer[firstNumer].x != realWayToPlayer[secondNumer].x &&
                 realWayToPlayer[firstNumer].y != realWayToPlayer[secondNumer].y)
             {
+                float rotationInY = 0;
+
                 if (realWayToPlayer[betweenUs].x == realWayToPlayer[secondNumer].x && realWayToPlayer[betweenUs].y > realWayToPlayer[secondNumer].y)
+                {
+                    rotationInY = 180;
                     print("Izquierda");
+                }
                 else if (realWayToPlayer[betweenUs].x == realWayToPlayer[secondNumer].x && realWayToPlayer[betweenUs].y < realWayToPlayer[secondNumer].y)
+                {
+                    rotationInY = 0;
                     print("Derecha");
-                else if(realWayToPlayer[betweenUs].y == realWayToPlayer[secondNumer].y && realWayToPlayer[betweenUs].x < realWayToPlayer[secondNumer].x)
+                }
+                else if (realWayToPlayer[betweenUs].y == realWayToPlayer[secondNumer].y && realWayToPlayer[betweenUs].x < realWayToPlayer[secondNumer].x)
+                {
+                    rotationInY = -90;
                     print("Arriba");
+                }
                 else if (realWayToPlayer[betweenUs].y == realWayToPlayer[secondNumer].y && realWayToPlayer[betweenUs].x > realWayToPlayer[secondNumer].x)
+                {
+                    rotationInY = 90;
                     print("Abajo");
+                }
+
+                transform.rotation = Quaternion.Euler(new Vector3(0, rotationInY, 0));
 
                 print("Girar");
-                Debug.Break();
             }
         }
     }

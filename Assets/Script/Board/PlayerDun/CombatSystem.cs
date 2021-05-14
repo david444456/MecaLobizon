@@ -99,7 +99,7 @@ namespace Board
         public void NewCombatTypeCharacter(Vector2 lastPosition)
         {
             //instanciar combate en la zona que llega por referencia
-            gameObjectCombatZone = Instantiate(instantiateCombatZone, new Vector3(lastPosition.x, 0, lastPosition.y), Quaternion.identity);
+            gameObjectCombatZone = Instantiate(instantiateCombatZone, new Vector3(lastPosition.x, 0, lastPosition.y), MediatorBoard.Mediator.GetRotationPlayer());
 
             //cambiar la camara, animacion para mostrar la zona de combate
             GameObject goCamera = GameObject.Find("CameraCombatZone");
@@ -109,8 +109,11 @@ namespace Board
             transformCameraMain.gameObject.SetActive(false);
             playableDirector.Play();
 
+            //para usar con el player
+            goCamera.transform.localPosition = goCamera.transform.localPosition + new Vector3(correctionXEnemy, -0.7f, 0.91f);
+
             //instanciar el enemigo en la zona 
-            enemy = Instantiate(characterBoard.prefabGameObject, new Vector3(lastPosition.x+correctionXEnemy, 0.65f, lastPosition.y), Quaternion.identity);
+            enemy = Instantiate(characterBoard.prefabGameObject, goCamera.transform.position, MediatorBoard.Mediator.GetRotationPlayer());
 
 
             //mover mi jugador a la zona, 
@@ -237,8 +240,10 @@ namespace Board
         }
 
         private void FinishCombat() {
-            isCombat = false;
+
             StartCoroutine(FinishTheGameWithTime());
+            gameObjectAbilitiesPlayer.SetActive(false);
+            isCombat = false;
 
         }
 
@@ -252,20 +257,25 @@ namespace Board
             StartTurnPlayer();
         }
 
-        IEnumerator FinishTheGameWithTime() {
-            yield return new WaitForSeconds(1);
+        IEnumerator FinishTheGameWithTime()
+        {
+            if (isCombat)
+            {
 
-            transformCameraCombat.SetActive(false);
-            transformCameraMain.SetActive(true);
+                yield return new WaitForSeconds(1);
 
-            yield return new WaitForSeconds(1);
+                transformCameraCombat.SetActive(false);
+                transformCameraMain.SetActive(true);
 
-            gameObjectAbilitiesPlayer.SetActive(false);
-            Destroy(gameObjectCombatZone);
-            Destroy(enemy);
-            levelEnemy++;
-            MediatorBoard.Mediator.CompleteEventPlayer();
-            MediatorBoard.Mediator.SetCoinRewardEvent((int)progressionCombat.GetStat(Stat.RewardCoin, characterBoard.GetCharacterClass(), levelEnemy));
+                yield return new WaitForSeconds(1);
+
+                gameObjectAbilitiesPlayer.SetActive(false);
+                Destroy(gameObjectCombatZone);
+                Destroy(enemy, 2);
+                levelEnemy++;
+                MediatorBoard.Mediator.CompleteEventPlayer();
+                MediatorBoard.Mediator.SetCoinRewardEvent((int)progressionCombat.GetStat(Stat.RewardCoin, characterBoard.GetCharacterClass(), levelEnemy));
+            }
         }
     }
 }

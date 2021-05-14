@@ -10,14 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
-  m_Name: Patagonia 1
+  m_Name: PatagoniaSpecial 1
   m_EditorClassIdentifier: 
-  TextInEvent: "Anchimall\xE9n\nLa noche se encuentra bastante cerrada, el terciopelo
-    negro ti\xF1endo de oscuridad todo a tu alrededor. La Patagonia se ve mucho m\xE1s
-    atemorizante sin el brillo del sol sobre tu cabeza, un enorme desierto silencioso
-    y apabullante. Por un segundo, piensas que tus ojos te enga\xF1an. Pero no, \xA1hay
-    una luz brillando al frente! \xBFSer\xE1 la fogata de alg\xFAn campamento? \xBFO
-    tal vez una l\xE1mpara olvidada? Tal vez deber\xEDas acercarte, y averiguarlo.\r"
+  TextInEvent: Cagaste
   textConfirmButton: " El anchimall\xE9n se asusta debido a tu presencia repentina,
     \xA1y suelta un fuerte fogonazo! El choque te deja mareado, y el anchimalen aprovecha
     para robarte toda la leche y la miel que ten\xEDas.\r\n*Esta opci\xF3n reduce
@@ -38,6 +33,8 @@ MonoBehaviour:
   coinFalse: 0
   moveToPosition: 1
   winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
   workinWithMoreEvents: 0
   firstButtonMoreEvent: 0
   newEventRegionalToGo: {fileID: 0}

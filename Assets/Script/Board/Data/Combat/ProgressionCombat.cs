@@ -6,6 +6,8 @@ namespace Board {
     [CreateAssetMenu(fileName = "Prog 1", menuName = "Board/new prog combat", order = 0)]
     public class ProgressionCombat : ScriptableObject
     {
+        [SerializeField] public int largeOfTheListRow = 4;
+        [SerializeField] public int largeOfTheListColumn = 4;
         [SerializeField] ProgressionCharacterClass[] characterClasses;
 
         Dictionary<CharacterClass, Dictionary<Stat, float[]>> lookUpTable = null;

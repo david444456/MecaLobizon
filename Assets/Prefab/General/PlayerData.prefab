@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBoard: {fileID: 11400000, guid: 314ffa726b1283c418edc90aa16ce7af, type: 2}
+  progressionCombat: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterBoardEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}

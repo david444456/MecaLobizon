@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e325c45987a852a49b3a2bcf6e850418, type: 3}
   m_Name: Prog 1
   m_EditorClassIdentifier: 
+  largeOfTheListRow: 3
+  largeOfTheListColumn: 4
   characterClasses:
   - character: 1
     abilitiesCharacters:

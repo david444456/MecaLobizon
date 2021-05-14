@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Noroeste 3
+  m_EditorClassIdentifier: 
+  TextInEvent: "Tapados\r\nTus ojos no lo pueden creer. Te encontrabas vagando por
+    la noche cerca de los cerros, disfrutando de la frescura y el cielo estrellado,
+    cuando una columna de gas luminoso llam\xF3 tu atenci\xF3n. Al acercarte, \xA1te
+    encontraste con uno de los famosos tapados, antiguos tesoros enterrados por caciques,
+    viajeros y conquistadores! Esto podr\xEDa ayudarte en tu misi\xF3n. Sin embargo,
+    sabes que la leyenda cuenta que estos tesoros se encuentran protegidos por guardianes.
+    \xBFValdr\xE1 la pena arriesgarse?\u201D"
+  textConfirmButton: "La ambici\xF3n le gana a la prudencia, y prontamente te pones
+    a desenterrar el tesoro. \xA1De pronto, una serpiente aparece y se lanza hacia
+    vos! Logras deshacerte de ella despu\xE9s de una dura pelea, \xA1y su cuerpo
+    se convierte en monedas de oro! Vaya suerte la tuya."
+  textDeclineButton: "La curiosidad mat\xF3 al gato, y aunque vos seas un lobo, tu
+    intuici\xF3n dice que ese dicho te aplica tambi\xE9n. Es mejor dejar las cosas
+    enterradas all\xED donde est\xE1n. No vaya a ser que los esp\xEDritus se alteren."
+  textFirstButton: Desenterrar el tapado.
+  textSecondButton: Dejar el tapado solo.
+  spriteBackGround: {fileID: 21300000, guid: c04b6f26a1cb14943b6992c512005884, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 50
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

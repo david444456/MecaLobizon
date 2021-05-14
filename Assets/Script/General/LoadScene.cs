@@ -10,5 +10,9 @@ namespace General {
             SceneManager.LoadScene(index);
         }
 
+        public void ExitApp() {
+            Application.Quit();
+        }
+
     }
 }

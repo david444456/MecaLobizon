@@ -8,6 +8,6 @@ namespace Board
     {
         TypeMap GetActualTypeMapByIndex(int index);
         void SetTypeLootMap(TypeLootMap newType);
-        void CreatePrincipalWay();
+        void CreatePrincipalWay(int row, int column);
     }
 }

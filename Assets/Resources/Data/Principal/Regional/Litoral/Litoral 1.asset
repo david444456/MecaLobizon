@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Litoral 1
+  m_EditorClassIdentifier: 
+  TextInEvent: "Ca\xE1 Yar\xED\r\nUno no puede pasar por el litoral y no disfrutar
+    de un buen mate. Es casi un insulto no hacerlo. As\xED que decides sentarte a
+    la vera del camino, sobre un toc\xF3n de \xE1rbol, sacar tu termo, el mate, y
+    lo m\xE1s importante, la yerba. Sin embargo, una terrible revelaci\xF3n cae sobre
+    vos. \xA1Te olvidaste la yerba! \xA1C\xF3mo puede ser eso posible! Bueno, la
+    localidad m\xE1s cercana no est\xE1 muy lejos de all\xED. No es m\xE1s que un
+    inconveniente, \xA1pero vaya que es molesto!\r"
+  textConfirmButton: "No llegas a caminar m\xE1s que unos metros cuando una criatura
+    aparece al frente tuyo. Es peque\xF1a, casi et\xE9rea, y se presenta como Ca\xE1
+    Yar\xED. \xA1Es el hada y patrona de la yerba mate! Al escuchar tu pedido y tu
+    misi\xF3n, prontamente se dirige hacia las junglas, y vuelve con un enorme paquete
+    de yerba. Te dice que es un regalo del litoral y de su gente, y te desea buena
+    suerte para tu viaje. A veces, uno tiene que recordar la bondad de los seres
+    de esta tierra."
+  textDeclineButton: 
+  textFirstButton: Siguiente.
+  textSecondButton: Continuar tu viaje.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

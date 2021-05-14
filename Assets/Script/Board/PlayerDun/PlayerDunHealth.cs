@@ -27,7 +27,7 @@ namespace Board
         }
 
         public void ChangePositionPlayerToCombat(Vector3 vector3Position) {
-            transform.position = vector3Position;
+            //transform.position = vector3Position;
         }
 
         public void SetAttackPlayerAnimation() {

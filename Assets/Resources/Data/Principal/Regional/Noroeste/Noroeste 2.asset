@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Noroeste 2
+  m_EditorClassIdentifier: 
+  TextInEvent: "Diablada\r\nEl norte te recibe con fiestas, algarab\xEDa y m\xFAsica.
+    \xA1Llegas justo a tiempo para las Diabladas! La alegr\xEDa de todos es contagiosa,
+    y las ganas de unirte a esta celebraci\xF3n que recuerda a aquellos seres aymaranos
+    que acompa\xF1aban al hombre por su paso desde el Ukupacha para reencarnar en
+    el Akapacha, en el eterno ciclo de la vida y la muerte, son contagiosas. Tal
+    vez no sea la mejor idea, pero\u2026 \xBFqu\xE9 mal podr\xEDa hacer?\u201D\n"
+  textConfirmButton: "Dejando toda precauci\xF3n de lado, y embargado por la alegr\xEDa
+    y el alcohol, te arrojas de cabeza a festejar con el resto. Te parece vislumbrar
+    entre la muchedumbre a un par de estos antiguos seres, pero lo achacas al alcohol
+    y a las emociones del momento. Tambi\xE9n les echas la culpa luego cuando despiertas
+    en un lugar desconocido, y casi sin dinero. \xA1Pero al menos, tienes una incre\xEDble
+    historia que contar! Si es que logras acordarte de algo, claro.\r"
+  textDeclineButton: "A pesar de que toda esa diversi\xF3n resulta tentadora, es
+    mejor mantener la cabeza clara y enfocarte en tu misi\xF3n. Despu\xE9s de todo,
+    \xA1est\xE1s bastante lejos de Buenos Aires todav\xEDa! No debes olvidarte que
+    este viaje tiene un prop\xF3sito."
+  textFirstButton: Unirse a las festividades.
+  textSecondButton: "Declinar la invitaci\xF3n."
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 2
+  healthTrue: 0
+  healthFalse: 1
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Board;
 
 namespace PrincipalMap
 {
@@ -20,10 +21,14 @@ namespace PrincipalMap
         [SerializeField] int healthFalse = 0;
         [SerializeField] int coinTrue = 0;
         [SerializeField] int coinFalse = 0;
-        [SerializeField] int moveToPosition = 1;
+        [Range(1, 6)] [SerializeField] int moveToPosition = 1;
 
         [Header("Win")]
         [SerializeField] public int winCondition = 100;
+
+        [Header("Combat")]
+        [SerializeField] public ProgressionCombat progressionCombatLevel;
+        [SerializeField] public CharacterBoard characterEnemy;
 
         [Header("More events")]
         [SerializeField] public bool workinWithMoreEvents = false;

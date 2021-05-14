@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: La Pampa 2
+  m_EditorClassIdentifier: 
+  TextInEvent: "Huitranalhue\r\n\u201CEscuchas una conmoci\xF3n en medio de la noche,
+    compuesto del mugido de vacas y el balido de ovejas, y te acercas a investigar.
+    Prontamente llegas a un corral, cuya puerta parece haber sido violentada. \xA1Y
+    dentro del corral, hay dos personas, intentando llevarse a los animales! No parece
+    que fueran los due\xF1os, por la manera en la cual el ganado reacciona. Tal vez
+    deber\xEDas intervenir.\r"
+  textConfirmButton: "Prontamente sales de los altos pastizales, y te enfrentas a
+    los ladrones de ganado. La visi\xF3n de un lobiz\xF3n los asusta, \xA1pero no
+    estaban solos! Antes de que puedas lamentarte por tu pobre decisi\xF3n, una sombra
+    aparece y noquea a todos los bandidos que hab\xEDan aparecido con una espada
+    de madera. Parece una persona alta, vestida completamente de negro, con orejas
+    puntiagudas y ojos azules. Te dirige un asentimiento de cabeza, y desaparece
+    en la noche. \xBFAcaso ese no era el Huitranalhue?\r"
+  textDeclineButton: "Los ladrones nunca trabajan solos. Seguramente debe haber vig\xEDas
+    o refuerzos en alg\xFAn lado. Lo mejor ser\xE1 hacer un rodeo, y no inmiscuirse.
+    Esos animales no se encuentran bajo tu cuidado, tampoco."
+  textFirstButton: Intervenir.
+  textSecondButton: "Ignorar la situaci\xF3n."
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 3
+  healthTrue: 1
+  healthFalse: 0
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: La Pampa 1
+  m_EditorClassIdentifier: 
+  TextInEvent: "La Llorona\r\nLa noche te encuentra al momento en el cual llegas
+    a lo que parece un casco de estancia abandonado. Es un muy buen lugar para descansar
+    y estar al resguardo de los elementos, as\xED que prontamente te haces un hueco
+    en alguna de las habitaciones, y cierras los ojos para descansar. Sin embargo,
+    el sue\xF1o se te ve interrumpido por un desgarrador sollozo que parece llegar
+    de otras de las habitaciones. Te acercas a investigar, y lo que encuentras te
+    pone blanco. \xA1Una mujer se encuentra en los pasillos! Parece flotar, pues
+    no se le notan los pies. Se la ve desconsolada."
+  textConfirmButton: "Resulta que esta mujer era la anterior habitante de esta estancia,
+    y se encuentra desconsolada debido a que, por su culpa, su hijo beb\xE9 se ahog\xF3.
+    Te dejas sumir por la compasi\xF3n, y la acompa\xF1as durante un rato, llorando
+    con ella. Agradecida, promete dejarte dormir tranquilo. A la ma\xF1ana, encuentras
+    un peque\xF1o regalo a tus pies."
+  textDeclineButton: "Lo mejor es no meterse en el camino de los esp\xEDritus en
+    pena. A pesar de que algunos pueden llegar a ser bondadosos, o al menos, no da\xF1inos,
+    la prudencia indica dejarlos tranquilos. Tendr\xE1s que dormir afuera, pero ya
+    est\xE1s acostumbrado. Sos un lobiz\xF3n despu\xE9s de todo, \xBFeh?."
+  textFirstButton: Acercarse a la mujer y charlar con ella.
+  textSecondButton: "Dejarla sola, y salir de all\xED de forma sigilosa."
+  spriteBackGround: {fileID: 21300000, guid: aad733f9183c4dc4a9d0fe809dbbae21, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 10
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

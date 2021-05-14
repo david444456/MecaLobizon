@@ -16,12 +16,17 @@ namespace PrincipalMap {
         [SerializeField] public Text firstButtontextUIEventShow;
         [SerializeField] public Text secondButtontextUIEventShow;
         [SerializeField] float timeWaitFinishEvent = 1;
+        [SerializeField] AudioSource audioSource;
+        [SerializeField] AudioClip[] audioClips;
 
         [Header("Group event")]
         [SerializeField] GroupRegionalEvent[] groupRegionalEvents;
 
         RegionalEvent actualRegionalEvent;
         ControlGameMap controlGameMap;
+
+        bool nextEventIsCombat = false;
+        bool alreadySeeWinCondiciton = false;
 
         void Start()
         {
@@ -30,27 +35,42 @@ namespace PrincipalMap {
 
         public void ActiveNewEvent(int index)
         {
-            actualRegionalEvent = groupRegionalEvents[index].GetRandomRegionalEvent();
-            activeNewEventControlUI();
 
+            actualRegionalEvent = groupRegionalEvents[index].GetRandomRegionalEvent();
 
             //verificated win condition
             if (actualRegionalEvent.GetTypeRegionEvent() == TypeRegionEvent.FinishGame)
             {
                 if (controlGameMap.actualCoin > actualRegionalEvent.winCondition)
                 {
-
+                    activeNewEventControlUI();
                 }
                 else
                 {
+                    if (!alreadySeeWinCondiciton)
+                    {
+                        activeNewEventControlUI();
+                        alreadySeeWinCondiciton = true;
+                    }
+                    else {
+                        FinishEventButton();
+                    }
                     firstButtonGO.SetActive(false);
                 }
+            }
+            else {
+
+                activeNewEventControlUI();
             }
         }
 
         private void activeNewEventControlUI()
         {
             UIEventShow.SetActive(true);
+            firstButtonGO.SetActive(true);
+            audioSource.clip = audioClips[ Random.Range(0, audioClips.Length)];
+            audioSource.Play();
+
             textUIEventShow.text = actualRegionalEvent.GetPrincipalText();
             imageBackGroundEvent.sprite = actualRegionalEvent.GetSpriteBackGround();
             firstButtontextUIEventShow.text = actualRegionalEvent.GetFirstButtonText();
@@ -92,6 +112,7 @@ namespace PrincipalMap {
         }
 
         public void FinishEventButton() {
+            if(nextEventIsCombat) controlGameMap.EventCombat(actualRegionalEvent.progressionCombatLevel, actualRegionalEvent.characterEnemy);
             StartCoroutine(FinishEvent());
         }
 
@@ -104,10 +125,14 @@ namespace PrincipalMap {
                     else controlGameMap.EventCoin(actualRegionalEvent.GetCoinFalse());
                     break;
                 case TypeRegionEvent.Move:
-                    if(confirm) controlGameMap.EventMoveNewPosition();
+                    if (confirm) {
+                        controlGameMap.EventSubtractHalfCoin();
+                        controlGameMap.EventMoveNewPosition();
+
+                    }
                     break;
                 case TypeRegionEvent.Combat:
-                    if (confirm) controlGameMap.EventCombat();
+                    if (confirm) nextEventIsCombat = true;
                     break;
                 case TypeRegionEvent.Health:
                     if (confirm) controlGameMap.EventHealth(actualRegionalEvent.GetHealthTrue());

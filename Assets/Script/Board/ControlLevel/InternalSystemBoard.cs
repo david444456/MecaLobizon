@@ -1,3 +1,4 @@
+using General;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,14 +18,18 @@ namespace Board
 
         ControlCoinInGame controlCoinGame;
         TypeLootMap typeDiceMap;
+        ProgressionCombat progCombat;
 
         void Awake()
         {
             controlCoinGame = GetComponent<ControlCoinInGame>();
 
+            progCombat = PlayerData.playerData.progressionCombat;
+
             typeDiceMap = mediatorBoard.GetMapTypeRandom();
             mediatorBoard.SetTypeLootMap(typeDiceMap);
-            mediatorBoard.CreatePrincipalWay();
+            mediatorBoard.CreatePrincipalWay(progCombat.largeOfTheListRow, progCombat.largeOfTheListColumn);
+
 
         }
 
@@ -35,6 +40,10 @@ namespace Board
 
         public void ExitBoardEvent()
         {
+            //save data and past parameters
+            PlayerData.playerData.SetAugmentCoin(  mediatorBoard.GetActualCoin());
+            PlayerData.playerData.LoadScene(1);
+
             print("Exit the dungeon, (win) " + controlCoinGame.GetActualCoin());
         }
 

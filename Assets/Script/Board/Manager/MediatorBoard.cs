@@ -37,7 +37,7 @@ namespace Board
 
         public void SetTypeLootMap(TypeLootMap newType) => viewWayBoard.SetTypeLootMap(newType);
 
-        public void CreatePrincipalWay() => viewWayBoard.CreatePrincipalWay();
+        public void CreatePrincipalWay(int row, int column) => viewWayBoard.CreatePrincipalWay(row, column);
 
         public List<Vector2> GetTheRealWayMovePlayer() => viewWayBoard.GetTheRealWayMovePlayer();
 
@@ -76,5 +76,7 @@ namespace Board
         public int GetMaxHealth() => playerDunHealth.GetMaxHealth();
 
         public void SetAttackPlayerAnimation() => playerDunHealth.SetAttackPlayerAnimation();
+
+        public Quaternion GetRotationPlayer() => playerDunMove.GetRotationPlayer();
     }
 }

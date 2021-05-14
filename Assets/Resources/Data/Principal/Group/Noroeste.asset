@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Noroeste
   m_EditorClassIdentifier: 
   regionalEvent:
-  - {fileID: 11400000, guid: 7bcd2ee2b1decf042abd21acaa894826, type: 2}
+  - {fileID: 11400000, guid: 0fcb96bafbd557142b61578e78871b40, type: 2}
+  - {fileID: 11400000, guid: 0fcb96bafbd557142b61578e78871b40, type: 2}
+  - {fileID: 11400000, guid: 0fcb96bafbd557142b61578e78871b40, type: 2}
+  internCountQueueRegionalEvent: 0

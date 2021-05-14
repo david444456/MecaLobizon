@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Cuyo 3
+  m_EditorClassIdentifier: 
+  TextInEvent: "Huecub-Lauqu\xE9n\r\nTransitar por la aridez del Cuyo puede desalentar
+    a cualquiera, pero tu fortaleza y las ansias de cumplir tu misi\xF3n te hacen
+    seguir adelante. Eso no quiere decir que, cada tanto, uno debe realizar una pausa
+    para descansar sus exhaustos m\xFAsculos. \xA1Hasta un lobiz\xF3n tiene que frenar
+    cada tanto, y disfrutar del paisaje! Da la casualidad de que el lugar que elegiste
+    para tal actividad no es nada m\xE1s ni nada menos que Huecub-Lauqu\xE9n, la
+    Laguna de la Ni\xF1a encantada. Esta podr\xEDa ser una excelente oportunidad
+    para comprobar si la leyenda es cierta."
+  textConfirmButton: "La luz de la luna termina ba\xF1ando todo el lugar, desde el
+    acantilado en donde se cuenta que Elcha y su amado se arrojaron para evitar un
+    destino cruel, hasta la roca cercana, una bruja convertida en esa forma por un
+    rayo, que hab\xEDa conspirado entre ellos. Prontamente, los rayos plateados lunares
+    besan la superficie de la laguna, reflejando la imagen de una joven y hermosa
+    princesa. Satisfecho, decides pasar el resto de la noche all\xED. No solo comprobaste
+    que esa historia era real, \xA1si no que ahora tienes compa\xF1\xEDa para acampar!"
+  textDeclineButton: "A pesar de que es tentador comprobar la existencia de antiguas
+    leyendas, lo mejor es no abandonar tu norte. Al menos, tu norte hipot\xE9tico.
+    Habr\xE1 tiempo de sobra para averiguar si de verdad la superficie cristalina
+    de la laguna refleja a una princesa a la luz de la luna cuando no tengas tanto
+    pelo en el cuerpo."
+  textFirstButton: Esperar hasta la noche junto a la laguna.
+  textSecondButton: Continuar tu camino.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 3
+  healthTrue: 0
+  healthFalse: 1
+  coinTrue: 0
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

@@ -22,9 +22,22 @@ namespace Board
         List<List<int>> way = new List<List<int>>();
         List<Vector2> realWayToPlayer = new List<Vector2>();
 
-        public void CreatePrincipalWay() {
+        public void CreatePrincipalWay(int row, int column) {
             dataRandomValueInTheWay = actualTypeLootMap.GetDataRandomValue();
-            WayBoard wayBoard = new WayBoard(_largeOfTheListRow, _largeOfTheListColumn, dataRandomValueInTheWay);
+
+            WayBoard wayBoard;
+
+            if (row == 0 || column == 0)
+            {
+                wayBoard = new WayBoard(_largeOfTheListRow, _largeOfTheListColumn, dataRandomValueInTheWay);
+            }
+            else {
+                _largeOfTheListRow = row;
+                _largeOfTheListColumn = column;
+                wayBoard = new WayBoard(row, column, dataRandomValueInTheWay);
+            }
+
+
             way = wayBoard.GetCalculateNewGameWay();
             realWayToPlayer = wayBoard.GetTheRealWayMovePlayer();
             PrintAllWay();

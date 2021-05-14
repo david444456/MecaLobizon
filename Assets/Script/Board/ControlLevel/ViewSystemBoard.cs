@@ -8,10 +8,18 @@ namespace Board
 {
     public class ViewSystemBoard : View, ISystemBoard, IControlSlotMapEvent
     {
+        [Header("Board")]
         [SerializeField] InternalSystemBoard internalSystemBoard;
+        [SerializeField] GameObject panelConfirmExitDungeon;
+        [SerializeField] Text textInfoRewards;
 
         public void ExitBoardEvent()
         {
+            textInfoRewards.text = MediatorBoard.Mediator.GetActualCoin().ToString();
+            panelConfirmExitDungeon.SetActive(true);
+        }
+
+        public void ConfirmExitTheDungeon() {
             internalSystemBoard.ExitBoardEvent();
         }
 

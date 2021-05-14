@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Cuyo 2
+  m_EditorClassIdentifier: 
+  TextInEvent: "Llastay\r\nSi hay algo que abunda en las tierras altas e inhabitadas
+    del Cuyo, son las llamas y los guanacos. Manadas de ellos se los puede ver recorriendo
+    los \xE1ridos terraplenes a los que llaman hogar, tanto de la mano de pastores
+    como salvajes e ind\xF3mitos. Y tu est\xF3mago prontamente te recuerda que no
+    has comido nada en un tiempo. Una llama podr\xEDa ser algo un buen almuerzo.
+    Te acercas, acechante, a un reba\xF1o medio aislado. No parecen haberse dado
+    cuenta de tu presencia, y te preparas para atacar. En ese momento, recuerdas
+    las historias sobre el Llastay, el dios tutelar de las aves y protector de los
+    animales del cerro. Tal vez deber\xEDas pedirle permiso antes de cazar."
+  textConfirmButton: "A pesar de las quejas de tu est\xF3mago, la prudencia logra
+    anteponerse, y pides de manera silenciosa el favor de Llastay. Durante varios
+    minutos, parece que nada ocurre, e incluso, el reba\xF1o se dispersa. Antes de
+    que puedas lamentar tus malas decisiones, aparece otra llama, esta vez cargada
+    con cofres y objetos. Pasa a tu lado, y deja caer uno al suelo, para luego alejarse.
+    Bueno, obtuviste comida y algunas monedas para el camino. Aunque no es carne
+    de llama, sigue siendo deliciosa."
+  textDeclineButton: "El hambre le gana a la paciencia, y prontamente te lanzas a
+    la cacer\xEDa, pudiendo abatir una llama en el proceso, mientras las otras huyen
+    despavoridas. Mientras te ocupas de cocinar tu reci\xE9n adquirido fest\xEDn,
+    puedes sentir como algo cae sobre tu cabeza. Al pasar tu mano, \xA1puedes ver
+    que un c\xF3ndor defec\xF3 encima tuyo! El ave da un par de vueltas m\xE1s en
+    el cielo, y luego se aleja. Tal vez fue una advertencia de Llastay, diciendo
+    que seas un poco m\xE1s cuidadoso en el futuro."
+  textFirstButton: "Realizar una r\xE1pida plegaria."
+  textSecondButton: Decidir atacar de todos modos.
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: 20
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

@@ -1,8 +1,10 @@
 using Board;
+using General;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace PrincipalMap
@@ -45,8 +47,11 @@ namespace PrincipalMap
             viewGameMap = GetComponent<ViewControlGameMap>();
             controlEvent = GetComponent<ControlEvent>();
 
-            ChangeHealth( initialHealth);
-            ChangeCoin( initialCoin);
+            if(PlayerData.playerData.Move == 0) ChangeHealth( initialHealth);
+            else ChangeHealth(PlayerData.playerData.Move);
+
+            if (PlayerData.playerData.Coin == 0) ChangeCoin( initialCoin);
+            else ChangeCoin(PlayerData.playerData.Coin);
 
             textGoalCoinWin.text = regionalEventWinCondition.winCondition.ToString();
         }
@@ -60,8 +65,16 @@ namespace PrincipalMap
             SetMovementPlayer(GetNewRollMove());
         }
 
-        public void EventCombat()
+        public void EventCombat(ProgressionCombat progressionCombat, CharacterBoard characterBoard)
         {
+            //save data and past parameters
+            PlayerData.playerData.Move = actualHealth;
+            PlayerData.playerData.Coin = actualCoin;
+            PlayerData.playerData.progressionCombat = progressionCombat;
+            PlayerData.playerData.characterBoardEnemy = characterBoard;
+
+            //load scene
+            PlayerData.playerData.LoadScene(2);
             print("Mortal Combat");
         }
 
@@ -69,6 +82,11 @@ namespace PrincipalMap
         {
             ChangeCoin(coins);
             print("Tome coins, toma: " + coins);
+        }
+
+        public void EventSubtractHalfCoin() {
+            actualCoin = actualCoin/2;
+            textCoin.text = actualCoin.ToString();
         }
 
         public void EventHealth(int health)

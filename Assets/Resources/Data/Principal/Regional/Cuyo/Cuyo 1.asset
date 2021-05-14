@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
+  m_Name: Cuyo 1
+  m_EditorClassIdentifier: 
+  TextInEvent: "Huecufes\r\nLa noche te acompa\xF1a mientras atraviesas el Valle
+    de la Luna, y dejas volar tu imaginaci\xF3n, simulando que de verdad te encuentras
+    sobre la superficie del astro celeste, y juegas con las sombras a explorar un
+    paisaje alien\xEDgena y \xFAnico. Lo que sea con tal de romper la monoton\xEDa
+    del viaje. Y al parecer, tus deseos son escuchados, pues prontamente, te llegan
+    voces en la oscuridad. Tus orejas se ponen alerta al darte cuenta de su identidad.
+    \xA1Son huecufes, esp\xEDritus malignos, intentando corromper un alma! Una decisi\xF3n
+    se te plantea en tu cabeza."
+  textConfirmButton: "Valientemente te interpones ante los esp\xEDritus y el alma
+    perdida, pero es dif\xEDcil enfrentarse a criaturas incorp\xF3reas siendo uno
+    material. Prontamente eres abrumado, y sientes que puede ocurrir lo peor hasta
+    que sientes el olor de hojas de canelo siendo quemadas. \xA1Por suerte, una machi
+    se encontraba cerca, y pudo ahuyentar a los huecufes! Le agradeces a la anciana,
+    y te retiras r\xE1pidamente de all\xED. Quien sabe lo que podr\xEDa haberte pasado
+    si no se encontraba la machi para ayudarte."
+  textDeclineButton: "A veces, los huecufes son enviados por los Ngen, esp\xEDritus
+    protectores, para castigar a un alma que se port\xF3 especialmente mal en vida.
+    Lo mejor tal vez sea no interferir en los asuntos de esp\xEDritus tan poderosos."
+  textFirstButton: "Enfrentarse a los esp\xEDritus."
+  textSecondButton: "Ignorar la situaci\xF3n, y alejarse."
+  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  firstButtonBool: 1
+  secondButtonBool: 0
+  typeRegionEvent: 1
+  healthTrue: 0
+  healthFalse: 0
+  coinTrue: -5
+  coinFalse: 0
+  moveToPosition: 1
+  winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
+  newEventRegionalToGo: {fileID: 0}

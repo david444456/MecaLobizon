@@ -2,6 +2,7 @@ using Board;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace General
 {
@@ -11,6 +12,9 @@ namespace General
 
         [SerializeField] CharacterBoard _playerBoard;
 
+        public ProgressionCombat progressionCombat;
+        public CharacterBoard characterBoardEnemy;
+
         int health = 0;
         int coin = 0;
         int damage = 0;
@@ -18,7 +22,7 @@ namespace General
 
         public int Health { get => health;
             set {
-
+                health = value;
             }
         }
 
@@ -27,13 +31,13 @@ namespace General
             get => coin;
             set
             {
-
+                coin = value;
             }
         }
 
         public int Damage { get => damage;
             set {
-
+                damage = value;
             }
         }
 
@@ -42,7 +46,7 @@ namespace General
             get => move;
             set
             {
-
+                move = value;
             }
         }
 
@@ -54,6 +58,8 @@ namespace General
                 Destroy(gameObject);
 
             health = _playerBoard.InitialHealthPlayer;
+
+            DontDestroyOnLoad(this);
         }
 
         void Start()
@@ -63,5 +69,12 @@ namespace General
 
         public CharacterBoard GetPlayerBoard() => _playerBoard;
 
+        public void SetAugmentCoin(int newCoin) {
+            coin += newCoin;
+        }
+
+        public void LoadScene(int index) {
+            SceneManager.LoadScene(index);
+        }
     }
 }

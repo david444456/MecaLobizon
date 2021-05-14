@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Patagonia
   m_EditorClassIdentifier: 
   regionalEvent:
+  - {fileID: 11400000, guid: dd6a8c28073c39d4a95740a960945a62, type: 2}
   - {fileID: 11400000, guid: 144268d54271f9b43bff2196c08ca2fe, type: 2}
   - {fileID: 11400000, guid: c75cb402fb6b1764b9db00befa12b68a, type: 2}
-  - {fileID: 11400000, guid: dd6a8c28073c39d4a95740a960945a62, type: 2}
   internCountQueueRegionalEvent: 2

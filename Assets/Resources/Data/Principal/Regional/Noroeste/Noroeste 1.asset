@@ -25,13 +25,13 @@ MonoBehaviour:
     a\xFAn sigues dando vueltas por las alturas! Tal es tu ofuscaci\xF3n, que no
     notas que tienes en tu bolsillo algunas monedas extra.\n*Esta opci\xF3n aumenta
     tus monedas en 15.*"
-  textDeclineButton: "Esa actitud no le cay\xF3 muy bien al Ekeko. Sin embargo, entiende
-    tambi\xE9n tu situaci\xF3n, y esta vez, lo dejar\xE1 pasar. \xA1Pero m\xE1s vale
-    que la pr\xF3xima, al menos lleves un cigarro extra!\r\nEsta opci\xF3n no arroja
-    consecuencias negativas ni positivas\r"
+  textDeclineButton: "\n\nEsa actitud no le cay\xF3 muy bien al Ekeko. Sin embargo,
+    entiende tambi\xE9n tu situaci\xF3n, y esta vez, lo dejar\xE1 pasar. \xA1Pero
+    m\xE1s vale que la pr\xF3xima, al menos lleves un cigarro extra!\r\nEsta opci\xF3n
+    no arroja consecuencias negativas ni positivas\r"
   textFirstButton: Ofrecerle alimento, bebida y un cigarro
   textSecondButton: Negarte, y continuar tu camino
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  spriteBackGround: {fileID: 21300000, guid: f8666fb5c9eb5a34186c34a0ea4bb848, type: 3}
   firstButtonBool: 1
   secondButtonBool: 0
   typeRegionEvent: 1
@@ -41,6 +41,8 @@ MonoBehaviour:
   coinFalse: 0
   moveToPosition: 1
   winCondition: 100
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
   workinWithMoreEvents: 0
   firstButtonMoreEvent: 0
   newEventRegionalToGo: {fileID: 0}

@@ -32,7 +32,7 @@ MonoBehaviour:
     en 5.*"
   textFirstButton: Ignorar la advertencia.
   textSecondButton: Acatar la advertencia.
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  spriteBackGround: {fileID: 21300000, guid: 9268056c84667f749a9036e2ebb9ceba, type: 3}
   firstButtonBool: 1
   secondButtonBool: 0
   typeRegionEvent: 1
@@ -42,6 +42,8 @@ MonoBehaviour:
   coinFalse: 5
   moveToPosition: 1
   winCondition: 100
-  workinWithMoreEvents: 1
-  firstButtonMoreEvent: 1
+  progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
+  characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
+  workinWithMoreEvents: 0
+  firstButtonMoreEvent: 0
   newEventRegionalToGo: {fileID: 11400000, guid: 2389d506712c564449bab83695df096c, type: 2}
