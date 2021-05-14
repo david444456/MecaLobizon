@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
-  m_Name: Caba 1
+  m_Name: Caba 2
   m_EditorClassIdentifier: 
   TextInEvent: "\xA1Al fin llegas a la capital! Fue un viaje arduo y complicado,
     pero tu meta se alza majestuosa frente a vos. Te internas en sus numerosas y
     laber\xEDnticas calles, tus o\xEDdos llen\xE1ndose con el ruido de la metr\xF3polis,
     y tus ojos se sienten invadidos frente a tanta luz, color, y nuevas vistas. \xA1El
-    bullicio de la ciudad es tan distinto a la tranquilidad del campo!"
-  textConfirmButton: "Prontamente te diriges hacia la Casa Rosada, pidiendo una audiencia
-    con el Presidente. Debido a lo incre\xEDble y fant\xE1stico de tu situaci\xF3n,
-    sos r\xE1pidamente escoltado al Despacho Presidencial. All\xED, luego de explicar
-    tu predicamente, el Presidente prontamente accede a apadrinarte, \xA1levantando
-    as\xED la maldici\xF3n!"
-  textDeclineButton: "Sin embargo, prontamente te encuentras frente a una barrera.
-    \xA1Al parecer, hay que pagar un peaje para ingresar! Vaya, y no tienes suficiente
-    dinero. Vas a tener que volver luego."
+    bullicio de la ciudad es tan distinto a la tranquilidad del campo! Prontamente
+    te diriges hacia la Casa Rosada, pidiendo una audiencia con el Presidente. Debido
+    a lo incre\xEDble y fant\xE1stico de tu situaci\xF3n, sos r\xE1pidamente escoltado
+    al Despacho Presidencial. All\xED, luego de explicar tu predicamente, el Presidente
+    prontamente accede a apadrinarte, \xA1levantando as\xED la maldici\xF3n!"
+  textConfirmButton: 'Felicitaciones, terminaste el juego. '
+  textDeclineButton: No tenes dinero suficiente.
   textFirstButton: Tengo el dinero.
   textSecondButton: Continuar tu camino.
   spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
@@ -36,7 +34,7 @@ MonoBehaviour:
   coinTrue: 0
   coinFalse: 0
   moveToPosition: 1
-  winCondition: 0
+  winCondition: 100
   progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
   characterEnemy: {fileID: 11400000, guid: 24e33b6712722ca499b562ef22c0bc9f, type: 2}
   workinWithMoreEvents: 0

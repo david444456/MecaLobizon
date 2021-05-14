@@ -19,6 +19,9 @@ namespace PrincipalMap {
         [SerializeField] AudioSource audioSource;
         [SerializeField] AudioClip[] audioClips;
 
+        [Header("Win text")]
+        [SerializeField] [TextArea(10,20)] string textWin;
+
         [Header("Group event")]
         [SerializeField] GroupRegionalEvent[] groupRegionalEvents;
 
@@ -44,6 +47,7 @@ namespace PrincipalMap {
                 if (controlGameMap.actualCoin > actualRegionalEvent.winCondition)
                 {
                     activeNewEventControlUI();
+                    textUIEventShow.text = textWin;
                 }
                 else
                 {

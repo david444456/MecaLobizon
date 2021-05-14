@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
   m_Name: Win
   m_EditorClassIdentifier: 
-  TextInEvent: Ganaste sos un crack
-  textConfirmButton: chau
+  TextInEvent: "Prontamente te diriges hacia la Casa Rosada, pidiendo una audiencia
+    con el Presidente. Debido a lo incre\xEDble y fant\xE1stico de tu situaci\xF3n,
+    sos r\xE1pidamente escoltado al Despacho Presidencial. All\xED, luego de explicar
+    tu predicamente, el Presidente prontamente accede a apadrinarte, \xA1levantando
+    as\xED la maldici\xF3n!"
+  textConfirmButton: 'GG '
   textDeclineButton: 'chau
 
 '
-  textFirstButton: Tengo el dinero.
+  textFirstButton: GG
   textSecondButton: Continuar tu camino.
   spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
   firstButtonBool: 1
@@ -29,6 +33,8 @@ MonoBehaviour:
   coinFalse: 0
   moveToPosition: 1
   winCondition: 100
+  progressionCombatLevel: {fileID: 0}
+  characterEnemy: {fileID: 0}
   workinWithMoreEvents: 0
   firstButtonMoreEvent: 0
   newEventRegionalToGo: {fileID: 0}

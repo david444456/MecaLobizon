@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f2db4d74204f948b9c2de0ee826872, type: 3}
   m_Name: Lost
   m_EditorClassIdentifier: 
-  TextInEvent: Perdiste!
+  TextInEvent: "A pesar de los mejores esfuerzos de uno, a veces las cosas no pueden
+    lograrse. Tal vez los objetivos planteados eran inalcanzables en un principio,
+    puestos a una altura demasiado elevada como para alcanzarlos, o quiz\xE1s, muy
+    en el fondo, tu verdadero objetivo era otro. Puede que la meta que te hab\xEDas
+    impuesto haya sido en realidad una excusa, una manera de animarte a salir al
+    exterior, y explorar todos los misterios y leyendas de tu pa\xEDs.\r\n\r\nSea
+    como fuera, no hay que ver esto como una derrota. Quiz\xE1s sea el inicio de
+    una nueva \xE9poca, en la cual te sumerjas de cuerpo completo en el maravilloso
+    lago de las leyendas y folclores argentinos. Ahora eres parte de ellos.\r\n"
   textConfirmButton: F
   textDeclineButton: F doble
-  textFirstButton: Tengo el dinero.
+  textFirstButton: Entiendo :c
   textSecondButton: Continuar tu camino.
   spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
   firstButtonBool: 1

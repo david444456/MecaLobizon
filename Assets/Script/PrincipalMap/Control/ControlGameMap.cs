@@ -30,7 +30,7 @@ namespace PrincipalMap
 
         [Header("Player var")]
         [SerializeField] int initialHealth = 50;
-        [SerializeField] int initialCoin = 0;    
+        [SerializeField] int initialCoin = 0;
 
         ControlEvent controlEvent;
         ViewControlGameMap viewGameMap;
