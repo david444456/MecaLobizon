@@ -24,10 +24,12 @@ namespace Board
         {
             controlCoinGame = GetComponent<ControlCoinInGame>();
 
+            if (PlayerData.playerData == null) print("Null");
             progCombat = PlayerData.playerData.progressionCombat;
 
             typeDiceMap = mediatorBoard.GetMapTypeRandom();
             mediatorBoard.SetTypeLootMap(typeDiceMap);
+
             mediatorBoard.CreatePrincipalWay(progCombat.largeOfTheListRow, progCombat.largeOfTheListColumn);
 
 

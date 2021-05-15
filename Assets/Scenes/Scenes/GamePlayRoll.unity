@@ -1002,6 +1002,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1443347780}
+        m_TargetAssemblyTypeName: Board.PlayerDunMove, Assembly-CSharp
+        m_MethodName: ContinueMovePlayerAfterRound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &184286883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3704,8 +3716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53f6954e69f92149a24340b3ac0102a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _largeOfTheListRow: 6
-  _largeOfTheListColumn: 20
+  _largeOfTheListRow: 4
+  _largeOfTheListColumn: 4
   dataRandomValueInTheWay: 0600000002000000030000000400000005000000
   slots:
   - {fileID: 7181072365514657354, guid: a6bc4aa0cca30b7428b6302e41ad4948, type: 3}
@@ -3937,6 +3949,7 @@ MonoBehaviour:
   m_countMaxMoveDice: 0
   m_countMoveDice: 0
   newMovement: 0
+  completeRoundBoolMove: 0
   animator: {fileID: 1443347783}
 --- !u!4 &1443347781
 Transform:

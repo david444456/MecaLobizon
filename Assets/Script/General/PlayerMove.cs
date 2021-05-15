@@ -20,6 +20,7 @@ namespace General
         [HideInInspector] public int m_countMoveDice = 0;
 
         public bool newMovement = false;
+        public bool completeRoundBoolMove = false;
         public Animator animator;
 
         public virtual void Start() {
@@ -48,23 +49,33 @@ namespace General
 
             if (m_countMoveDice < m_countMaxMoveDice)
             {
-                m_countMoveDice++;
-                //move
-
-                if (realWayToPlayer.Count > m_actualIndexList + 1)
+                if (completeRoundBoolMove)
                 {
-                    m_actualIndexList++;
+                    yield return new WaitForSeconds(timeSpeedToMove * 2);
+                    print("Estoy deteniendo el movimiento");
+                    StartCoroutine(MovementDicePlayer());
                 }
                 else
                 {
-                    CompleteRoundWay();
-                    m_actualIndexList = 0;
-                }
-                UpdateAnimatorPlayer();
-                VerificatedRotationPlayer();
-                LastPositionToMove = new Vector3(realWayToPlayer[m_actualIndexList].y, _distanceUpPlayerInTheWay, realWayToPlayer[m_actualIndexList].x);
+                    print("Estoy moviendo");
+                    m_countMoveDice++;
+                    //move
 
-                StartCoroutine(MovementDicePlayer());
+                    if (realWayToPlayer.Count > m_actualIndexList + 1)
+                    {
+                        m_actualIndexList++;
+                    }
+                    else
+                    {
+                        CompleteRoundWay();
+                        m_actualIndexList = 0;
+                    }
+                    UpdateAnimatorPlayer();
+                    VerificatedRotationPlayer();
+                    LastPositionToMove = new Vector3(realWayToPlayer[m_actualIndexList].y, _distanceUpPlayerInTheWay, realWayToPlayer[m_actualIndexList].x);
+
+                    StartCoroutine(MovementDicePlayer());
+                }
             }
             else
             {
@@ -96,7 +107,7 @@ namespace General
         }
 
         public virtual void CompleteRoundWay() {
-
+            completeRoundBoolMove = true;
         }
     }
 }

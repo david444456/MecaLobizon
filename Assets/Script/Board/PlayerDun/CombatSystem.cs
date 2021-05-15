@@ -63,7 +63,7 @@ namespace Board
 
             gameObjectControlSliders.SetActive(true);
 
-            actualEnergy = 30;
+            actualEnergy = Random.Range(25,40);
             if (actualEnergy >= 1) {
                 textTimeCombat.text = actualEnergy.ToString();
                 UpdateSlidersAbilitiesPlayer();

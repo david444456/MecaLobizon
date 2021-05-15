@@ -19,6 +19,8 @@ namespace PrincipalMap
         [SerializeField] Text textHealth;
         [SerializeField] Text textGoalCoinWin;
         [SerializeField] RegionalEvent regionalEventWinCondition;
+        [SerializeField] GameObject GOButtonGoCABA = null;
+        [SerializeField] GameObject GOButtonNewDiceMove = null;
 
         [Header("Menu condition")]
         [SerializeField] GameObject MenuGameObject = null;
@@ -60,6 +62,11 @@ namespace PrincipalMap
         {
             Application.targetFrameRate = 60;
             ActiveButtonDiceNewRollMove();
+        }
+
+        public void GoImmediatelyToCaba() {
+            GOButtonNewDiceMove.SetActive(false);
+            SetMovementPlayer(2);
         }
 
         public void EventMoveNewPosition() {
@@ -149,6 +156,10 @@ namespace PrincipalMap
         {
             actualCoin += newCoin;
             textCoin.text = actualCoin.ToString() ;
+
+            if (actualCoin >= regionalEventWinCondition.winCondition) {
+                GOButtonGoCABA.SetActive(true);
+            }
             //text
         }
 
