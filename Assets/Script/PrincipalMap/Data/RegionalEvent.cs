@@ -14,8 +14,7 @@ namespace PrincipalMap
         [SerializeField] string textFirstButton;
         [SerializeField] string textSecondButton;
         [SerializeField] Sprite spriteBackGround;
-        [SerializeField] bool firstButtonBool = false;
-        [SerializeField] bool secondButtonBool = false;
+        [SerializeField] bool onlyShowOneWindows = false;
         [SerializeField] TypeRegionEvent typeRegionEvent;
         [SerializeField] int healthTrue = 0;
         [SerializeField] int healthFalse = 0;
@@ -45,9 +44,7 @@ namespace PrincipalMap
 
         public string GetDeclineButtonText() => textDeclineButton;
 
-        public bool GetFirstButtonBool() => firstButtonBool;
-
-        public bool GetSecondButtonBool() => secondButtonBool;
+        public bool GetOnlyShowOneBool() => onlyShowOneWindows;
 
         public TypeRegionEvent GetTypeRegionEvent() => typeRegionEvent;
 

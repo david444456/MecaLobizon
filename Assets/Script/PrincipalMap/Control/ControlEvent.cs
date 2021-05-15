@@ -92,9 +92,10 @@ namespace PrincipalMap {
             }
 
             //no more events
-            DecideTypeEvent(actualRegionalEvent.GetFirstButtonBool());
-            print("confirmo: " + actualRegionalEvent.GetPrincipalText());
+            DecideTypeEvent(true);
             textUIEventShow.text = actualRegionalEvent.GetConfirmButtonText();
+            print("confirmo: " + actualRegionalEvent.GetPrincipalText());
+
         }
 
         public void RefuseEvent() {
@@ -109,10 +110,20 @@ namespace PrincipalMap {
                 }
             }
 
+
+           /* if (actualRegionalEvent.GetOnlyShowOneBool())
+            {
+                FinishEventButton();
+            }
+            else
+            {*/
+                textUIEventShow.text = actualRegionalEvent.GetDeclineButtonText();
+            //}
+
             //no more events
-            DecideTypeEvent(actualRegionalEvent.GetSecondButtonBool());
+            DecideTypeEvent(false);
             print("Me rehuso" +actualRegionalEvent.GetPrincipalText());
-            textUIEventShow.text = actualRegionalEvent.GetDeclineButtonText();
+
         }
 
         public void FinishEventButton() {

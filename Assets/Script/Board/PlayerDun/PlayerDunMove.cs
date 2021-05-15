@@ -27,6 +27,10 @@ namespace Board
             MediatorBoard.Mediator.CompletePathPlayer(m_actualIndexList);
         }
 
+        public void ContinueMovePlayerAfterRound() {
+            completeRoundBoolMove = false;
+        }
+
         public Vector2 GetPositioByIndex(int index) {
             return realWayToPlayer[index];
         }
@@ -53,6 +57,7 @@ namespace Board
 
         public override void CompleteRoundWay()
         {
+            base.CompleteRoundWay();
             MediatorBoard.Mediator.ExitBoardEvent();
         }
 
