@@ -27,9 +27,8 @@ MonoBehaviour:
     este viaje tiene un prop\xF3sito."
   textFirstButton: "Dejar una ofrenda de tabaco y ca\xF1a."
   textSecondButton: Continuar camino sin dejar una ofrenda.
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  spriteBackGround: {fileID: 21300000, guid: bb4cbe011e57ca046ba4a36cc3ccca1a, type: 3}
+  onlyShowOneWindows: 0
   typeRegionEvent: 3
   healthTrue: 1
   healthFalse: 0
