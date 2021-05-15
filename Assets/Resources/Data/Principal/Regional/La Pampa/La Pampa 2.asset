@@ -30,7 +30,7 @@ MonoBehaviour:
     Esos animales no se encuentran bajo tu cuidado, tampoco."
   textFirstButton: Intervenir.
   textSecondButton: "Ignorar la situaci\xF3n."
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  spriteBackGround: {fileID: 21300000, guid: fff28d7503eedba43826ffaa36d096fd, type: 3}
   firstButtonBool: 1
   secondButtonBool: 0
   typeRegionEvent: 3

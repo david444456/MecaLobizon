@@ -34,7 +34,7 @@ namespace Board
         [SerializeField] Slider sliderHealthEnemy;
 
 
-        AbilitiesCharacter[] abilitiesPlayer;
+        AbilitiesCharacter[] abilitiesPlayer = new AbilitiesCharacter[3];
         AbilitiesCharacter[] abilitiesEnemy;
         int[] timeAbilitiesEnemy = new int[5];
 
@@ -126,7 +126,13 @@ namespace Board
 
 
             //update abilities
-            abilitiesPlayer = MediatorBoard.Mediator.GetAbilitiesPlayer();
+            List<AbilitiesCharacter> abilitiesCharacters = MediatorBoard.Mediator.GetAbilitiesPlayer();
+            for (int i = 0; i< abilitiesPlayer.Length; i++) {
+                int indexRandom = Random.Range(0, abilitiesCharacters.Count) ;
+                abilitiesPlayer[i] = abilitiesCharacters[indexRandom];
+                abilitiesCharacters.RemoveAt(indexRandom);
+            }
+
             abilitiesEnemy = progressionCombat.GetAbilitiesCharacters(characterBoard.GetCharacterClass());
 
             ///update life player

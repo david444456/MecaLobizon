@@ -34,7 +34,7 @@ MonoBehaviour:
     pelo en el cuerpo."
   textFirstButton: Esperar hasta la noche junto a la laguna.
   textSecondButton: Continuar tu camino.
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  spriteBackGround: {fileID: 21300000, guid: 6a2aad0790660f345942eb86052bf759, type: 3}
   firstButtonBool: 1
   secondButtonBool: 0
   typeRegionEvent: 3

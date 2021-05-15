@@ -520,7 +520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71031704}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -2982,7 +2982,7 @@ MonoBehaviour:
   imageMenu: {fileID: 1116107165}
   regionalEventWinMenu: {fileID: 11400000, guid: 5c545e69e6271d04394b46b11db0e165, type: 2}
   regionalEventLostMenu: {fileID: 11400000, guid: 7c18cee270c1a104089cc58affbe440e, type: 2}
-  initialHealth: 10
+  initialHealth: 1
   initialCoin: 0
   actualCoin: 0
 --- !u!114 &907885678
@@ -4459,7 +4459,6 @@ MonoBehaviour:
   m_countMoveDice: 0
   newMovement: 0
   animator: {fileID: 0}
-  DiePlayer: 0
   controlGameMap: {fileID: 907885677}
   gameObjectsSlotsToMove:
   - {fileID: 1170812229}
@@ -5509,10 +5508,6 @@ PrefabInstance:
     - target: {fileID: 15866491697755607, guid: 966434d06e930ca40a7ea21bf5150202, type: 3}
       propertyPath: m_Name
       value: EffectShipDead
-      objectReference: {fileID: 0}
-    - target: {fileID: 15866491697755607, guid: 966434d06e930ca40a7ea21bf5150202, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7410603902255612594, guid: 966434d06e930ca40a7ea21bf5150202, type: 3}
       propertyPath: m_Materials.Array.data[0]

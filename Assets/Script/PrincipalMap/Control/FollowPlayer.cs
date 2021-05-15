@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour
 
     [SerializeField] Vector3 distanceToPlayer;
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = transformPlayer.position + distanceToPlayer;
     }

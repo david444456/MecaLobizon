@@ -14,6 +14,7 @@ namespace General
 
         public ProgressionCombat progressionCombat;
         public CharacterBoard characterBoardEnemy;
+        public int lastIndexPositionInMap = 1;
 
         int health = 0;
         int coin = 0;

@@ -58,6 +58,7 @@ namespace PrincipalMap
 
         private void Start()
         {
+            Application.targetFrameRate = 60;
             ActiveButtonDiceNewRollMove();
         }
 
@@ -154,6 +155,7 @@ namespace PrincipalMap
         private void UpdateMenuFinishGameLoop(RegionalEvent regionalEvent)
         {
             MenuGameObject.SetActive(true);
+            playerArgMove.DiePlayer = true;
             textMenu.text = regionalEvent.GetPrincipalText();
             textMenuButton.text = regionalEvent.GetFirstButtonText();
             imageMenu.sprite = regionalEvent.GetSpriteBackGround();

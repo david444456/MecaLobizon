@@ -71,7 +71,7 @@ namespace Board
 
         public void ChangePositionPlayerToCombat(Vector3 vector3Position) => playerDunHealth.ChangePositionPlayerToCombat(vector3Position);
 
-        public AbilitiesCharacter[] GetAbilitiesPlayer() => playerDunHealth.GetAbilitiesPlayer();
+        public List<AbilitiesCharacter> GetAbilitiesPlayer() => playerDunHealth.GetAbilitiesPlayer();
 
         public int GetMaxHealth() => playerDunHealth.GetMaxHealth();
 

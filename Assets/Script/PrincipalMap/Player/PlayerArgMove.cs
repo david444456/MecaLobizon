@@ -8,6 +8,8 @@ namespace PrincipalMap
 {
     public class PlayerArgMove : PlayerMove
     {
+        public bool DiePlayer = false;
+
         [Header("Argentina move")]
         [SerializeField] ControlGameMap controlGameMap;
         [SerializeField] GameObject[] gameObjectsSlotsToMove;
@@ -30,12 +32,21 @@ namespace PrincipalMap
                 realWayToPlayer.Add(vector2);
             }
 
+            navMeshAgent.enabled = false;
+            transform.position = new Vector3(realWayToPlayer[PlayerData.playerData.lastIndexPositionInMap].x, _distanceUpPlayerInTheWay, realWayToPlayer[PlayerData.playerData.lastIndexPositionInMap].y);
+            navMeshAgent.enabled = true;
+
             LastPositionToMove = transform.position;
         }
 
         public override void Update()
         {
             if (!newMovement) return;
+
+            if (DiePlayer) {
+                navMeshAgent.isStopped = true;
+                audioSource.Stop();
+            }
 
             /*move
             if (transform.position != LastPositionToMove)
@@ -61,6 +72,7 @@ namespace PrincipalMap
 
         public override void NewMovementPlayer(int value)
         {
+            PlayerData.playerData.lastIndexPositionInMap = value;
             LastPositionToMove = new Vector3( realWayToPlayer[value].x, _distanceUpPlayerInTheWay, realWayToPlayer[value].y);
 
             if (navMeshAgent.enabled) navMeshAgent.SetDestination(LastPositionToMove);

@@ -39,7 +39,15 @@ namespace Board
             animator.SetTrigger("Hit");
         }
 
-        public AbilitiesCharacter[] GetAbilitiesPlayer() => abilitiesPlayer;
+        public List<AbilitiesCharacter> GetAbilitiesPlayer() {
+            List<AbilitiesCharacter> abilitiesCharacters = new List<AbilitiesCharacter>();
+
+            for (int i = 0; i < abilitiesPlayer.Length; i++)
+            {
+                abilitiesCharacters.Add(abilitiesPlayer[i]);
+            } 
+            return abilitiesCharacters;
+         }
 
         public void SetActualHealthPlayer(int initialH) {
             m_actualCountHealth = initialH;

@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Board
@@ -8,7 +9,7 @@ namespace Board
         int GetHealth();
         void SetNewHealth(int value);
         void ChangePositionPlayerToCombat(Vector3 vector3Position);
-         AbilitiesCharacter[] GetAbilitiesPlayer();
+        List<AbilitiesCharacter> GetAbilitiesPlayer();
         int GetMaxHealth();
         void SetAttackPlayerAnimation();
     }
