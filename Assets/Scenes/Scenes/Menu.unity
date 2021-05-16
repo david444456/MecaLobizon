@@ -2623,7 +2623,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 49
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2638,15 +2638,11 @@ MonoBehaviour:
     una audiencia con el Presidente. Sin embargo, llegar va a ser complicado, y vas
     a necesitar de dinero para el viaje, as\xED como tambi\xE9n de un poco de cambio
     para comprar un par de regalos. \xA1No se puede pedir a alguien que lo apadrine
-    a uno sin al menos darle una muestra de afecto antes!\r\n\r\nLanza un dado, y
-    el n\xFAmero resultante ser\xE1 la regi\xF3n a la que te mover\xE1s. Una vez
-    all\xED, un evento tendr\xE1 lugar. En cada evento, deber\xE1s elegir una de
-    dos opciones, y las consecuencias de tu elecci\xF3n avanzar\xE1n o impedir\xE1n
-    tu progreso.\r\n\r\nEn tu camino, ir\xE1s recolectando (o perdiendo) monedas,
-    que son necesarias para poder desbloquear el final. Tambi\xE9n tienes un m\xE1ximo
-    de \u201Cd\xEDas\u201D o movimientos para cumplir tu misi\xF3n, 10 al inicio,
-    que pueden aumentar o disminuir dependiendo de tus elecciones. \xA1Pero cuidado,
-    si llegas a 0, la maldici\xF3n se volver\xE1 indefinida!\r\n"
+    a uno sin al menos darle una muestra de afecto antes!\r\n\r\n-Lanza un dado para
+    cambiar de regi\xF3n.\r\n-En cada evento, deber\xE1s elegir una de dos opciones.\r\n-Cuidado,
+    porque pueden ayudarte o amedrentar tu progreso\r\n-Necesitar\xE1s 50 monedas
+    para poder desbloquear el final\r\n-Ten\xE9s 10 d\xEDas para cumplir tu misi\xF3n.
+    \xA1Mucha suerte!\r\n"
 --- !u!222 &6984638816573264375
 CanvasRenderer:
   m_ObjectHideFlags: 0
