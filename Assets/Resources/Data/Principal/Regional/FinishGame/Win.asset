@@ -23,9 +23,8 @@ MonoBehaviour:
 '
   textFirstButton: GG
   textSecondButton: Continuar tu camino.
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  spriteBackGround: {fileID: 21300000, guid: 854ee547ef5cefb4a945978276c272ac, type: 3}
+  onlyShowOneWindows: 0
   typeRegionEvent: 4
   healthTrue: 0
   healthFalse: 0

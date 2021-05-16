@@ -27,7 +27,7 @@ MonoBehaviour:
     dinero. Vas a tener que volver luego."
   textFirstButton: Tengo el dinero.
   textSecondButton: Continuar tu camino.
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
+  spriteBackGround: {fileID: 21300000, guid: 854ee547ef5cefb4a945978276c272ac, type: 3}
   onlyShowOneWindows: 1
   typeRegionEvent: 4
   healthTrue: 0

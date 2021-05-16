@@ -30,9 +30,8 @@ MonoBehaviour:
     este viaje tiene un prop\xF3sito."
   textFirstButton: Unirse a las festividades.
   textSecondButton: "Declinar la invitaci\xF3n."
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  spriteBackGround: {fileID: 21300000, guid: 413252e5a2cbd2049b842bd83afa2ae9, type: 3}
+  onlyShowOneWindows: 0
   typeRegionEvent: 2
   healthTrue: 0
   healthFalse: 1

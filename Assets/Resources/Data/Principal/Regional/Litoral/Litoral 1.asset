@@ -26,12 +26,17 @@ MonoBehaviour:
     de yerba. Te dice que es un regalo del litoral y de su gente, y te desea buena
     suerte para tu viaje. A veces, uno tiene que recordar la bondad de los seres
     de esta tierra."
-  textDeclineButton: 
+  textDeclineButton: "No llegas a caminar m\xE1s que unos metros cuando una criatura
+    aparece al frente tuyo. Es peque\xF1a, casi et\xE9rea, y se presenta como Ca\xE1
+    Yar\xED. \xA1Es el hada y patrona de la yerba mate! Al escuchar tu pedido y tu
+    misi\xF3n, prontamente se dirige hacia las junglas, y vuelve con un enorme paquete
+    de yerba. Te dice que es un regalo del litoral y de su gente, y te desea buena
+    suerte para tu viaje. A veces, uno tiene que recordar la bondad de los seres
+    de esta tierra."
   textFirstButton: Siguiente.
   textSecondButton: Continuar tu viaje.
   spriteBackGround: {fileID: 21300000, guid: ccdd91fb394828544b7348961987d1fa, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  onlyShowOneWindows: 0
   typeRegionEvent: 1
   healthTrue: 0
   healthFalse: 0
