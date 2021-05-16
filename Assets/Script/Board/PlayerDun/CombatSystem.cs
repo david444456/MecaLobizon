@@ -27,6 +27,7 @@ namespace Board
         [SerializeField] Image[] imageFillAbilitiesPlayer;
         [SerializeField] Text[] textValueEnergyPlayer;
         [SerializeField] Text[] textValueDamagePlayer;
+        [SerializeField] Text[] textTypeDamageAbilities;
 
         [Header("UI Combat")]
         [SerializeField] GameObject gameObjectControlSliders;
@@ -83,7 +84,14 @@ namespace Board
             {
                 MediatorBoard.Mediator.SetAttackPlayerAnimation();
                 print("Attack to enemy: " + abilitiesPlayer[index].damage);
-                TakeDamageEnemy(abilitiesPlayer[index].damage);
+
+                if (abilitiesPlayer[index].characterClassSpecial == characterBoard.GetCharacterClass())
+                {
+                    TakeDamageEnemy(abilitiesPlayer[index].damage * 2);
+                }
+                else {
+                    TakeDamageEnemy(abilitiesPlayer[index].damage);
+                }
 
                 actualEnergy -= sliderAbilitiesPlayer[index].maxValue;
                 textTimeCombat.text = actualEnergy.ToString();
@@ -115,6 +123,8 @@ namespace Board
             //instanciar el enemigo en la zona 
             enemy = Instantiate(characterBoard.prefabGameObject, goCamera.transform.position, MediatorBoard.Mediator.GetRotationPlayer());
 
+            //progcombat
+            progressionCombat = MediatorBoard.Mediator.GetProgressionCombat();
 
             //mover mi jugador a la zona, 
             MediatorBoard.Mediator.ChangePositionPlayerToCombat(new Vector3(lastPosition.x - correctionXEnemy, 0.65f, lastPosition.y));
@@ -167,6 +177,7 @@ namespace Board
             for (int i = 0; i < sliderAbilitiesPlayer.Length; i++) {
                 sliderAbilitiesPlayer[i].maxValue = abilitiesPlayer[i].timeToAttack;
                 textValueDamagePlayer[i].text = abilitiesPlayer[i].damage.ToString();
+                textTypeDamageAbilities[i].text = abilitiesPlayer[i].characterClassSpecial.ToString() ;
                 textValueEnergyPlayer[i].text = abilitiesPlayer[i].timeToAttack.ToString();
                 imageBackGroundAbilitiesPlayer[i].sprite = abilitiesPlayer[i].spriteAbilities;
                 imageFillAbilitiesPlayer[i].sprite = abilitiesPlayer[i].spriteAbilities;
@@ -257,7 +268,7 @@ namespace Board
         {
             yield return new WaitForSeconds(1);
             animatorEnemy.SetTrigger("Attack");
-            TakeDamagePlayer(abilitiesEnemy[indexAb].damage);
+            TakeDamagePlayer(abilitiesEnemy[indexAb].damage + (int) progressionCombat.GetStat(Stat.Damage, characterBoard.GetCharacterClass(), characterBoard.GetInitialLevel()));
 
             yield return new WaitForSeconds(1);
             StartTurnPlayer();

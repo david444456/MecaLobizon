@@ -104,7 +104,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 5e0709bcfe55ffc4b97f75df57b2739a, type: 3}
+  m_Motion: {fileID: 7400000, guid: 32fe080a8153c8245a6f3ddde61a1fe9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -343,7 +343,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WalkChar
-  m_Speed: 1.6
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -9133058598638046104}
@@ -356,7 +356,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 32fe080a8153c8245a6f3ddde61a1fe9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 98ed41dd23be2e54eaa1a2a4df507730, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

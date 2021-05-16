@@ -40,6 +40,8 @@ namespace Board
             StartCoroutine(StartGame());
         }
 
+        public ProgressionCombat GetProgressionCombat() => progCombat;
+
         public void ExitBoardEvent()
         {
             //save data and past parameters
@@ -87,7 +89,7 @@ namespace Board
         }
 
         private void newRollMovementActiveUI() {
-            viewSystemDungeon.ActiveNewRollMovement();
+            viewSystemDungeon.ActiveButtonDiceNewRollMove();
         }
 
         IEnumerator StartGame() {
