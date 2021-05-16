@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToAttack: 5
   damage: 5
+  characterClassSpecial: 3
   nameAbilities: Palo de escoba
-  spriteAbilities: {fileID: 21300000, guid: ed1b6eec1f7c37342bc200c26d05800e, type: 3}
+  spriteAbilities: {fileID: 21300000, guid: 4caa7f96c6f30b84d8762448228e6094, type: 3}

@@ -37,6 +37,7 @@ namespace Board
         {
             m_lastDiceMoveValue = MediatorBoard.Mediator.GetNewDiceRoll();
             StartCoroutine(RollDiceMove());
+            
         }
     }
 }

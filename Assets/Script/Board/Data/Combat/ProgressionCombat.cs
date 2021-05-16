@@ -94,9 +94,10 @@ namespace Board {
 
         public enum CharacterClass
         {
-            Player,
-            Distance,
-            AttackMele
+            Lobizon,
+            Ekeko,
+            Llorona,
+            Pombero
         }
 
         public enum Stat

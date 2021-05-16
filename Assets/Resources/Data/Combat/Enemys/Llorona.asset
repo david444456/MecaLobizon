@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Llorona
   m_EditorClassIdentifier: 
   initialLevel: 2
-  characterClassTypeEnemy: 1
+  characterClassTypeEnemy: 2
   prefabGameObject: {fileID: 1952436420549468616, guid: caae6370c8d4cd44a91d778706cbdc93, type: 3}
   InitialHealthPlayer: 100

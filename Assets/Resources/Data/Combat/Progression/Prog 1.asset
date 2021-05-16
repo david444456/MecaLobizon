@@ -15,7 +15,7 @@ MonoBehaviour:
   largeOfTheListRow: 4
   largeOfTheListColumn: 4
   characterClasses:
-  - character: 1
+  - character: 2
     abilitiesCharacters:
     - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
     - {fileID: 11400000, guid: 5d05e65b45a82c94abcb5180b5cb5f53, type: 2}
@@ -45,8 +45,42 @@ MonoBehaviour:
       - 20
       - 25
   - character: 0
-    abilitiesCharacters: []
-    stats: []
-  - character: 0
-    abilitiesCharacters: []
-    stats: []
+    abilitiesCharacters:
+    - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
+    - {fileID: 11400000, guid: 5d05e65b45a82c94abcb5180b5cb5f53, type: 2}
+    - {fileID: 11400000, guid: 7df840a14d0c15d419d05d9c16d0f366, type: 2}
+    - {fileID: 11400000, guid: 70970b40b7e64e74f89d677dae0e956a, type: 2}
+    - {fileID: 11400000, guid: 905ce13f5def74041bada209078a4475, type: 2}
+    - {fileID: 11400000, guid: 6d91dfb13d4c9264caed42ae1c65622d, type: 2}
+    stats:
+    - stat: 0
+      levels: []
+  - character: 2
+    abilitiesCharacters:
+    - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
+    - {fileID: 11400000, guid: 5d05e65b45a82c94abcb5180b5cb5f53, type: 2}
+    - {fileID: 11400000, guid: 7df840a14d0c15d419d05d9c16d0f366, type: 2}
+    - {fileID: 11400000, guid: 70970b40b7e64e74f89d677dae0e956a, type: 2}
+    - {fileID: 11400000, guid: 905ce13f5def74041bada209078a4475, type: 2}
+    stats:
+    - stat: 0
+      levels:
+      - 15
+      - 25
+      - 35
+      - 45
+      - 50
+    - stat: 2
+      levels:
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+    - stat: 1
+      levels:
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
