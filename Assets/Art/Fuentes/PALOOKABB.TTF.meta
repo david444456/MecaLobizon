@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c1b142f32da8c0a4f98ed45f41c14aa1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Palooka BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a1310fb8607272044b472146fefb786a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
