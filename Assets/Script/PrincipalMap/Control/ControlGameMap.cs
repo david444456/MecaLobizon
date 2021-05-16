@@ -17,7 +17,6 @@ namespace PrincipalMap
         [Header("UI")]
         [SerializeField] Text textCoin;
         [SerializeField] Text textHealth;
-        [SerializeField] Text textGoalCoinWin;
         [SerializeField] RegionalEvent regionalEventWinCondition;
         [SerializeField] GameObject GOButtonGoCABA = null;
         [SerializeField] GameObject GOButtonNewDiceMove = null;
@@ -54,8 +53,6 @@ namespace PrincipalMap
 
             if (PlayerData.playerData.Coin == 0) ChangeCoin( initialCoin);
             else ChangeCoin(PlayerData.playerData.Coin);
-
-            textGoalCoinWin.text = regionalEventWinCondition.winCondition.ToString();
         }
 
         private void Start()
@@ -155,7 +152,7 @@ namespace PrincipalMap
         private void ChangeCoin(int newCoin)
         {
             actualCoin += newCoin;
-            textCoin.text = actualCoin.ToString() ;
+            textCoin.text = actualCoin.ToString() + "/" + regionalEventWinCondition.winCondition.ToString();
 
             if (actualCoin >= regionalEventWinCondition.winCondition) {
                 GOButtonGoCABA.SetActive(true);
