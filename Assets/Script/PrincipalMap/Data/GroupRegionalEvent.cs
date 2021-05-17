@@ -14,6 +14,8 @@ namespace PrincipalMap {
 
         public RegionalEvent GetRandomRegionalEvent()
         {
+            return regionalEvent[Random.Range(0, regionalEvent.Length)];
+
             int newValue = internCountQueueRegionalEvent;
 
             if (internCountQueueRegionalEvent < regionalEvent.Length-1)

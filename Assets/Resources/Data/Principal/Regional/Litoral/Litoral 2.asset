@@ -31,11 +31,10 @@ MonoBehaviour:
   textFirstButton: Rugir y aullar.
   textSecondButton: Lanzar una carcajada.
   spriteBackGround: {fileID: 21300000, guid: 8820214f5527b27499aa6d7ca58fb48f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  onlyShowOneWindows: 0
   typeRegionEvent: 3
-  healthTrue: 1
-  healthFalse: 0
+  healthTrue: 2
+  healthFalse: -1
   coinTrue: 0
   coinFalse: 0
   moveToPosition: 1

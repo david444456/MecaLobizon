@@ -40,8 +40,8 @@ MonoBehaviour:
   typeRegionEvent: 1
   healthTrue: 0
   healthFalse: 0
-  coinTrue: 0
-  coinFalse: 0
+  coinTrue: 15
+  coinFalse: 5
   moveToPosition: 1
   winCondition: 100
   progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}

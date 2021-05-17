@@ -32,14 +32,13 @@ MonoBehaviour:
     Lo mejor tal vez sea no interferir en los asuntos de esp\xEDritus tan poderosos."
   textFirstButton: "Enfrentarse a los esp\xEDritus."
   textSecondButton: "Ignorar la situaci\xF3n, y alejarse."
-  spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  spriteBackGround: {fileID: 21300000, guid: 8d3a25f06efed9644a6fe5b88bf44d72, type: 3}
+  onlyShowOneWindows: 0
   typeRegionEvent: 1
   healthTrue: 0
   healthFalse: 0
   coinTrue: -5
-  coinFalse: 0
+  coinFalse: 2
   moveToPosition: 1
   winCondition: 100
   progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}

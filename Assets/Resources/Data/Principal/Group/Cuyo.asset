@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f457aceee990f64b8dd11b2c7b5889f, type: 2}
   - {fileID: 11400000, guid: 50ab874650b1d884a95074c32a50795c, type: 2}
   - {fileID: 11400000, guid: 300cda1f6dd59e340958b4ded0f65c6a, type: 2}
-  internCountQueueRegionalEvent: 2
+  internCountQueueRegionalEvent: 0

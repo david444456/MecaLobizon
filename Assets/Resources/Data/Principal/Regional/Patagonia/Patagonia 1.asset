@@ -29,11 +29,10 @@ MonoBehaviour:
   textFirstButton: Acercarse a la luz.
   textSecondButton: Alejarse del mismo.
   spriteBackGround: {fileID: 21300000, guid: b3cc79963fc592643a7fdb0bc979ba5f, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  onlyShowOneWindows: 0
   typeRegionEvent: 3
   healthTrue: -1
-  healthFalse: 0
+  healthFalse: 1
   coinTrue: 0
   coinFalse: 0
   moveToPosition: 1

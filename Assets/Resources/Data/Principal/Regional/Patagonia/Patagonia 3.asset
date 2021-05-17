@@ -33,13 +33,12 @@ MonoBehaviour:
   textFirstButton: Ignorar la advertencia.
   textSecondButton: Acatar la advertencia.
   spriteBackGround: {fileID: 21300000, guid: 9268056c84667f749a9036e2ebb9ceba, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  onlyShowOneWindows: 0
   typeRegionEvent: 1
   healthTrue: 0
   healthFalse: 0
   coinTrue: -5
-  coinFalse: 5
+  coinFalse: 10
   moveToPosition: 1
   winCondition: 100
   progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}

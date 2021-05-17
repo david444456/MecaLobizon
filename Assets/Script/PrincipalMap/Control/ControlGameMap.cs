@@ -23,6 +23,7 @@ namespace PrincipalMap
 
         [Header("Menu condition")]
         [SerializeField] GameObject MenuGameObject = null;
+        [SerializeField] GameObject MenuEventGameObject = null;
         [SerializeField] Text textMenu;
         [SerializeField] Text textMenuButton;
         [SerializeField] Image imageMenu;
@@ -163,6 +164,7 @@ namespace PrincipalMap
         private void UpdateMenuFinishGameLoop(RegionalEvent regionalEvent)
         {
             MenuGameObject.SetActive(true);
+            MenuEventGameObject.SetActive(false);
             playerArgMove.DiePlayer = true;
             textMenu.text = regionalEvent.GetPrincipalText();
             textMenuButton.text = regionalEvent.GetFirstButtonText();

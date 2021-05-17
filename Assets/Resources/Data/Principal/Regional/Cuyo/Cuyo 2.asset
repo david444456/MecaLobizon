@@ -38,13 +38,12 @@ MonoBehaviour:
   textFirstButton: "Realizar una r\xE1pida plegaria."
   textSecondButton: Decidir atacar de todos modos.
   spriteBackGround: {fileID: 21300000, guid: 097934c6d6b2fcb49ad13f39b48f8be5, type: 3}
-  firstButtonBool: 1
-  secondButtonBool: 0
+  onlyShowOneWindows: 0
   typeRegionEvent: 1
   healthTrue: 0
   healthFalse: 0
   coinTrue: 20
-  coinFalse: 0
+  coinFalse: 5
   moveToPosition: 1
   winCondition: 100
   progressionCombatLevel: {fileID: 11400000, guid: a25716333a37ba0428198919170e3fa8, type: 2}
