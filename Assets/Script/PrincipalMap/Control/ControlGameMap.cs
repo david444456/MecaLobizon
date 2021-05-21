@@ -98,7 +98,6 @@ namespace PrincipalMap
         public void EventHealth(int health)
         {
             ChangeHealth(health);
-            print("Sos gracioso, toma: " + health);
         }
 
         public void EventFinishGame()
@@ -129,12 +128,11 @@ namespace PrincipalMap
         public void FinishPath() {
             moveActive = false;
             controlEvent.ActiveNewEvent(lastMove);
-            print("Termineeeee");
         }
 
         private void ActiveButtonDiceNewRollMove() {
             if (moveActive) return;
-            viewGameMap.ActiveButtonDiceNewRollMove();
+            viewGameMap.SetActiveButtonDiceNewRollMove(true);
 
         }
 

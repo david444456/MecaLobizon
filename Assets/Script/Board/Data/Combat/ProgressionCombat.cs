@@ -103,6 +103,7 @@ namespace Board {
         public enum Stat
         {
             Health,
+            AttackSpeed,
             RewardCoin,
             Damage
         }

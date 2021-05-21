@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace Board
 {
     public class EnemyControl : MonoBehaviour
-    {
+    { 
         int actualHealth = 0;
         Animator animator;
 

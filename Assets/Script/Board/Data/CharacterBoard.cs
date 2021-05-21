@@ -12,9 +12,12 @@ namespace Board
         [SerializeField] CharacterClass characterClassTypeEnemy;
         [SerializeField] public GameObject prefabGameObject;
         [SerializeField] public int InitialHealthPlayer = 100;
+        [SerializeField] float attackSpeedCharacter = 5f;
         
         public int GetInitialLevel() => initialLevel;
 
         public CharacterClass GetCharacterClass() => characterClassTypeEnemy;
+
+        public float GetAttackSpeed() => attackSpeedCharacter;
     }
 }

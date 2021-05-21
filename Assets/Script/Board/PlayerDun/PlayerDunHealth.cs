@@ -68,6 +68,7 @@ namespace Board
             SetHitPlayerAnimation();
             if (m_actualCountHealth <= 0) {
                 animator.SetTrigger("Die");
+                MediatorBoard.Mediator.LostTheGame();
                 print("Perdiste");
             }
         }

@@ -5,22 +5,24 @@ using UnityEngine;
 namespace Board
 {
     public class MediatorBoard : MonoBehaviour, IViewWayBoard, IWayBoard, IDiceMovement, IPlayerMove, ICombatSystem,
-        IPlayerHealth, IControlSlotMapEvent, IControlCoinInGame, ISystemBoard, IControlTypeDice, IInternalSystemBoard
+        IPlayerHealth, IControlSlotMapEvent, IControlCoinInGame, ISystemBoard, IControlTypeDice, IInternalSystemBoard,
+        IControlEnemySpawn, IPlayerStats, IAnimationDeadPlayer
     {
         public static MediatorBoard Mediator;
 
         [Header("Class")]
         [SerializeField] ViewWayBoard viewWayBoard;
-        [SerializeField] PlayerDunMove playerDunMove;
+        [SerializeField] PlayerDunMove playerBoardMove;
         [SerializeField] ControlDiceMovement ctrolDiceMove;
-        [SerializeField] PlayerDunMove playerMoveBoard;
         [SerializeField] CombatSystem combatSystem;
         [SerializeField] PlayerDunHealth playerDunHealth;
+        [SerializeField] PlayerDunStats playerDunStats;
         [SerializeField] ControlSlotEvent slotEvent;
         [SerializeField] ControlCoinInGame coinInGame;
         [SerializeField] ViewSystemBoard viewSystemBoard;
         [SerializeField] ControlDiceType controlDiceType;
         [SerializeField] InternalSystemBoard internalSystemBoard;
+        [SerializeField] ControlEnemySpawn controlEnemySpawn;
 
         private void Awake()
         {
@@ -33,6 +35,7 @@ namespace Board
             }
         }
 
+        //view system
         public TypeMap GetActualTypeMapByIndex(int index) => viewWayBoard.GetActualTypeMapByIndex(index);
 
         public void SetTypeLootMap(TypeLootMap newType) => viewWayBoard.SetTypeLootMap(newType);
@@ -41,35 +44,26 @@ namespace Board
 
         public List<Vector2> GetTheRealWayMovePlayer() => viewWayBoard.GetTheRealWayMovePlayer();
 
-        public int GetNewDiceRoll() => ctrolDiceMove.GetNewDiceRoll();
-
-        public void NewMovementPlayer(int value) => playerMoveBoard.NewMovementPlayer(value);
-
-        public void NewCombatTypeCharacter(Vector2 lastPosition) => combatSystem.NewCombatTypeCharacter(lastPosition);
-
-        public int GetHealth() => playerDunHealth.GetHealth();
-
-        public void SetNewHealth(int value) => playerDunHealth.SetNewHealth(value);
-
-        public void StartNewEventMap(TypeMap typeMap) => slotEvent.StartNewEventMap(typeMap);
-
-        public int GetActualCoin() => coinInGame.GetActualCoin();
-
-        public void SetCoinRewardEvent(int count) => coinInGame.SetCoinRewardEvent(count);
-
         public void ExitBoardEvent() => viewSystemBoard.ExitBoardEvent();
 
         public void LostTheGame() => viewSystemBoard.LostTheGame();
 
-        public TypeLootMap GetMapTypeRandom() => controlDiceType.GetMapTypeRandom();
+        //dice
+        public int GetNewDiceRoll() => ctrolDiceMove.GetNewDiceRoll();
 
-        public void CompletePathPlayer(int index) => internalSystemBoard.CompletePathPlayer(index);
+        //combat
+        public void NewCombatTypeCharacter(Vector2 lastPosition, GameObject prefabEnemy, CharacterBoard characterBoardEnemy) => combatSystem.NewCombatTypeCharacter(lastPosition, prefabEnemy, characterBoardEnemy);
 
-        public void CompleteEventPlayer() => internalSystemBoard.CompleteEventPlayer();
+        public void TakeDamageEnemy() => combatSystem.TakeDamageEnemy();
 
-        public ProgressionCombat GetProgressionCombat() => internalSystemBoard.GetProgressionCombat();
+        public void TakeDamagePlayer() => combatSystem.TakeDamagePlayer();
 
-        public Vector2 GetPositioByIndex(int index) => playerDunMove.GetPositioByIndex(index);
+        public bool GetActualStateCombat() => combatSystem.GetActualStateCombat();
+
+        //health
+        public int GetHealth() => playerDunHealth.GetHealth();
+
+        public void SetNewHealth(int value) => playerDunHealth.SetNewHealth(value);
 
         public void ChangePositionPlayerToCombat(Vector3 vector3Position) => playerDunHealth.ChangePositionPlayerToCombat(vector3Position);
 
@@ -79,6 +73,41 @@ namespace Board
 
         public void SetAttackPlayerAnimation() => playerDunHealth.SetAttackPlayerAnimation();
 
-        public Quaternion GetRotationPlayer() => playerDunMove.GetRotationPlayer();
+        //event map
+        public void StartNewEventMap(TypeMap typeMap) => slotEvent.StartNewEventMap(typeMap);
+
+        //control
+        public int GetActualCoin() => coinInGame.GetActualCoin();
+
+        public void SetCoinRewardEvent(int count) => coinInGame.SetCoinRewardEvent(count);
+
+        public TypeLootMap GetMapTypeRandom() => controlDiceType.GetMapTypeRandom();
+
+        //internal
+        public void CompletePathPlayer(int index) => internalSystemBoard.CompletePathPlayer(index);
+
+        public void CompleteEventPlayer() => internalSystemBoard.CompleteEventPlayer();
+
+        public ProgressionCombat GetProgressionCombat() => internalSystemBoard.GetProgressionCombat();
+
+        public void EventAnimationDiePlayer() => internalSystemBoard.EventAnimationDiePlayer();
+
+        //player move
+        public Vector2 GetPositioByIndex(int index) => playerBoardMove.GetPositioByIndex(index);
+
+        public void ChangeMoveStatePlayer(bool newState) => playerBoardMove.ChangeMoveStatePlayer(newState);
+
+        public Quaternion GetRotationPlayer() => playerBoardMove.GetRotationPlayer();
+
+        //spawn
+        public CharacterBoard GetSlotEnemy(int indexWay) => controlEnemySpawn.GetSlotEnemy(indexWay);
+
+        public GameObject GetActualInstanceEnemy(int index) => controlEnemySpawn.GetActualInstanceEnemy(index);
+
+        //stats
+        public float GetAttackSpeedPlayer() => playerDunStats.GetAttackSpeedPlayer();
+
+        public int GetDamageAttackPlayer() => playerDunStats.GetDamageAttackPlayer();
+
     }
 }

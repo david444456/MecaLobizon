@@ -6,12 +6,20 @@ using UnityEngine.UI;
 
 namespace Board
 {
-    public class ViewSystemBoard : View, ISystemBoard, IControlSlotMapEvent
+    public class ViewSystemBoard : View, ISystemBoard, IControlSlotMapEvent, IPlayerMove
     {
         [Header("Board")]
         [SerializeField] InternalSystemBoard internalSystemBoard;
         [SerializeField] GameObject panelConfirmExitDungeon;
+        [SerializeField] GameObject panelExitButtonContinueDungeon;
         [SerializeField] Text textInfoRewards;
+
+        [Header("UI button")]
+        [SerializeField] Text textButtonChangeMove;
+        [SerializeField] string firstTextInfoButton = "GO!";
+        [SerializeField] string secondTextInfoButton = "Stop!";
+
+        bool changeStateButtonInfo = false;
 
         public void ExitBoardEvent()
         {
@@ -28,9 +36,9 @@ namespace Board
             internalSystemBoard.LostTheGame();
         }
 
-        public override void SetNewMovementPlayer() //button
-        {
-            internalSystemBoard.SetMovementPlayer(m_lastDiceMoveValue);
+        public void PlayerDeadUIPanelReturnToMenu() {
+            ExitBoardEvent();
+            DesactiveButtonContinueInBoard();
         }
 
         public override void SetNewRandomDiceMove()
@@ -39,5 +47,15 @@ namespace Board
             StartCoroutine(RollDiceMove());
             
         }
+
+        public void ChangeMoveStatePlayer(bool newState)
+        {
+            changeStateButtonInfo = !changeStateButtonInfo;
+            textButtonChangeMove.text = changeStateButtonInfo ? firstTextInfoButton : secondTextInfoButton;
+
+            internalSystemBoard.ChangeMoveStatePlayer(changeStateButtonInfo);
+        }
+
+        private void DesactiveButtonContinueInBoard() => panelExitButtonContinueDungeon.SetActive(false);
     }
 }

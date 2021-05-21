@@ -12,23 +12,32 @@ namespace Board
         {
             base.Start();
             StartDataInTheGame(MediatorBoard.Mediator.GetTheRealWayMovePlayer());
+
+            StartCoroutine(StartGameMove());
         }
 
         public override void Update()
         {
-            UpdateTransformPositionXZ();
+            if (!stopMoveAroundBoard)
+            {
+                UpdateTransformPositionXZ();
+            }
         }
 
         public override void CompletePathMove() {
             newMovement = false;
 
-           // UpdateAnimatorPlayer();
+            // UpdateAnimatorPlayer();
 
             MediatorBoard.Mediator.CompletePathPlayer(m_actualIndexList);
         }
 
+        public void ChangeMoveStatePlayer(bool newState) {
+            stopMoveAroundBoard = newState;
+        }
+
         public void ContinueMovePlayerAfterRound() {
-            completeRoundBoolMove = false;
+            stopMoveAroundBoard = false;
         }
 
         public Vector2 GetPositioByIndex(int index) {
@@ -37,17 +46,6 @@ namespace Board
 
         public Quaternion GetRotationPlayer() {
             return transform.rotation;
-        }
-
-        public override void NewMovementPlayer(int value)
-        {
-            newMovement = true;
-
-            //UpdateAnimatorPlayer();
-
-            m_countMaxMoveDice = value;
-            m_countMoveDice = 0;
-            StartCoroutine(MovementDicePlayer());
         }
 
         public override void UpdateAnimatorPlayer()
@@ -106,6 +104,11 @@ namespace Board
 
                 print("Girar");
             }
+        }
+
+        private IEnumerator StartGameMove() {
+            yield return new WaitForSeconds(1);
+            StartCoroutine(MovementDicePlayer());
         }
     }
 }

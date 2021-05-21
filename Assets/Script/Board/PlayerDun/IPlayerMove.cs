@@ -3,6 +3,6 @@ namespace Board
 {
     public interface IPlayerMove
     {
-        void NewMovementPlayer(int value);
+        void ChangeMoveStatePlayer(bool newState);
     }
 }

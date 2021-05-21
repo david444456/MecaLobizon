@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Prog 1
   m_EditorClassIdentifier: 
   largeOfTheListRow: 4
-  largeOfTheListColumn: 4
+  largeOfTheListColumn: 16
   characterClasses:
   - character: 2
     abilitiesCharacters:
@@ -39,11 +39,18 @@ MonoBehaviour:
       - 25
     - stat: 1
       levels:
+      - 4
+      - 3
+      - 3
+      - 3
+      - 3
+    - stat: 3
+      levels:
       - 5
-      - 10
+      - 8
+      - 12
       - 15
       - 20
-      - 25
   - character: 0
     abilitiesCharacters:
     - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
@@ -55,7 +62,7 @@ MonoBehaviour:
     stats:
     - stat: 0
       levels: []
-  - character: 2
+  - character: 1
     abilitiesCharacters:
     - {fileID: 11400000, guid: bf5e08b994a893249bafbb0f7f2dcece, type: 2}
     - {fileID: 11400000, guid: 5d05e65b45a82c94abcb5180b5cb5f53, type: 2}

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Board
 {
-    public class InternalSystemBoard : MonoBehaviour, ISystemBoard, IInternalSystemBoard
+    public class InternalSystemBoard : MonoBehaviour, ISystemBoard, IInternalSystemBoard, IPlayerMove, IAnimationDeadPlayer
     {
         [SerializeField] MediatorBoard mediatorBoard;
         [SerializeField] ViewSystemBoard viewSystemDungeon;
@@ -19,6 +19,8 @@ namespace Board
         ControlCoinInGame controlCoinGame;
         TypeLootMap typeDiceMap;
         ProgressionCombat progCombat;
+
+        bool IsDeadPlayer = false;
 
         void Awake()
         {
@@ -44,8 +46,14 @@ namespace Board
 
         public void ExitBoardEvent()
         {
+            int coinReward = 0;
             //save data and past parameters
-            PlayerData.playerData.SetAugmentCoin(  mediatorBoard.GetActualCoin());
+            if (!IsDeadPlayer)
+                coinReward = mediatorBoard.GetActualCoin();
+            else
+                coinReward = mediatorBoard.GetActualCoin()/2;
+
+            PlayerData.playerData.SetAugmentCoin(coinReward);
             PlayerData.playerData.LoadScene(1);
 
             print("Exit the dungeon, (win) " + controlCoinGame.GetActualCoin());
@@ -53,7 +61,14 @@ namespace Board
 
         public void LostTheGame()
         {
+            IsDeadPlayer = true;
+            ChangeMoveStatePlayer(true);
             print("LostTheGame");
+        }
+
+        public void EventAnimationDiePlayer()
+        {
+            viewSystemDungeon.PlayerDeadUIPanelReturnToMenu();
         }
 
         public void CompletePathPlayer(int index) { //the index is +1
@@ -62,10 +77,19 @@ namespace Board
             switch (actualTypeMap.GetTypeEventBoard())
             {
                 case TypeEventBoard.Combat:
-                    Vector2 newVector2 = mediatorBoard.GetPositioByIndex(index);
-                    Vector2 vector2ChangeValue = new Vector2(newVector2.y, newVector2.x);
-                    mediatorBoard.NewCombatTypeCharacter(vector2ChangeValue);
-                    print("Combate!!! combate combate combate " + vector2ChangeValue);
+                    CharacterBoard characterBoardEnemy = mediatorBoard.GetSlotEnemy(index-1);
+
+                    if (characterBoardEnemy != null) {
+
+                        Vector2 newVector2 = mediatorBoard.GetPositioByIndex(index-1);
+                        Vector2 vector2ChangeValue = new Vector2(newVector2.y, newVector2.x);
+                        mediatorBoard.NewCombatTypeCharacter(vector2ChangeValue, mediatorBoard.GetActualInstanceEnemy(index-1), characterBoardEnemy);
+                        ChangeMoveStatePlayer(true);
+                        SetActiveButtonDiceNewRollMove(false);
+                        print("enemy in this position: " + vector2ChangeValue);
+                    }
+
+                    print("Combate!!! combate combate combate ");
                     break;
                 case TypeEventBoard.Event:
                     mediatorBoard.StartNewEventMap(actualTypeMap);
@@ -78,18 +102,19 @@ namespace Board
             }
         }
 
+        public void ChangeMoveStatePlayer(bool newState) => mediatorBoard.ChangeMoveStatePlayer(newState);
+
         public void CompleteEventPlayer()
         {
-            viewSystemDungeon.ActiveButtonDiceNewRollMove();
-        }
-
-        public void SetMovementPlayer(int newMoveValue)
-        {
-            mediatorBoard.NewMovementPlayer(newMoveValue);
+            if (!IsDeadPlayer)
+            {
+                if(!mediatorBoard.GetActualStateCombat()) ChangeMoveStatePlayer(false);
+                SetActiveButtonDiceNewRollMove(true);
+            }
         }
 
         private void newRollMovementActiveUI() {
-            viewSystemDungeon.ActiveButtonDiceNewRollMove();
+            SetActiveButtonDiceNewRollMove(true);
         }
 
         IEnumerator StartGame() {
@@ -98,6 +123,12 @@ namespace Board
             _principalCamera.SetActive(true);
             _typeDicePlatform.SetActive(false);
         }
+
+        private void SetActiveButtonDiceNewRollMove(bool newState) {
+            viewSystemDungeon.SetActiveButtonDiceNewRollMove(newState);
+        }
+
+
     }
 
     public interface IInternalSystemBoard {

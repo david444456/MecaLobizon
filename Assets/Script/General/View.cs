@@ -36,7 +36,7 @@ namespace General
             }
         }
 
-        public void ActiveButtonDiceNewRollMove() => UIButtonRollDice.SetActive(true);
+        public void SetActiveButtonDiceNewRollMove(bool newState) => UIButtonRollDice.SetActive(newState);
 
         public void ActiveNewRollMovement()
         {

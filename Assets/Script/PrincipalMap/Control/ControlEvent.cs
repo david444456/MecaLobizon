@@ -30,6 +30,7 @@ namespace PrincipalMap {
 
         bool nextEventIsCombat = false;
         bool alreadySeeWinCondiciton = false;
+        bool wonThisGame = true;
 
         void Start()
         {
@@ -44,9 +45,10 @@ namespace PrincipalMap {
             //verificated win condition
             if (actualRegionalEvent.GetTypeRegionEvent() == TypeRegionEvent.FinishGame)
             {
-                if (controlGameMap.actualCoin > actualRegionalEvent.winCondition)
+                if (controlGameMap.actualCoin >= actualRegionalEvent.winCondition)
                 {
                     activeNewEventControlUI();
+                    print("Ganaste el juego");
                     textUIEventShow.text = textWin;
                 }
                 else
@@ -91,11 +93,12 @@ namespace PrincipalMap {
                 }
             }
 
+            if (wonThisGame) print("Won");
+
             //no more events
             DecideTypeEvent(true);
             textUIEventShow.text = actualRegionalEvent.GetConfirmButtonText();
-            print("confirmo: " + actualRegionalEvent.GetPrincipalText());
-
+            //print("confirmo: " + actualRegionalEvent.GetPrincipalText());
         }
 
         public void RefuseEvent() {
@@ -154,7 +157,7 @@ namespace PrincipalMap {
                     else controlGameMap.EventHealth(actualRegionalEvent.GetHealthFalse());
                     break;
                 case TypeRegionEvent.FinishGame:
-                    if (controlGameMap.actualCoin > actualRegionalEvent.winCondition) controlGameMap.EventFinishGame();
+                    if (controlGameMap.actualCoin >= actualRegionalEvent.winCondition) controlGameMap.EventFinishGame();
                     break;
             }
         }

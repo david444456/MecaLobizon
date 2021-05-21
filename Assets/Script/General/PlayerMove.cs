@@ -20,7 +20,7 @@ namespace General
         [HideInInspector] public int m_countMoveDice = 0;
 
         public bool newMovement = false;
-        public bool completeRoundBoolMove = false;
+        public bool stopMoveAroundBoard = false;
         public Animator animator;
 
         public virtual void Start() {
@@ -28,11 +28,6 @@ namespace General
         }
 
         public virtual void Update() {
-
-        }
-
-        public virtual void NewMovementPlayer(int value)
-        {
 
         }
 
@@ -47,40 +42,44 @@ namespace General
         {
             yield return new WaitForSeconds(timeSpeedToMove);
 
-            if (m_countMoveDice < m_countMaxMoveDice)
+            if (stopMoveAroundBoard)
             {
-                if (completeRoundBoolMove)
-                {
-                    yield return new WaitForSeconds(timeSpeedToMove * 2);
-                    print("Estoy deteniendo el movimiento");
-                    StartCoroutine(MovementDicePlayer());
-                }
-                else
-                {
-                    print("Estoy moviendo");
-                    m_countMoveDice++;
-                    //move
-
-                    if (realWayToPlayer.Count > m_actualIndexList + 1)
-                    {
-                        m_actualIndexList++;
-                    }
-                    else
-                    {
-                        CompleteRoundWay();
-                        m_actualIndexList = 0;
-                    }
-                    UpdateAnimatorPlayer();
-                    VerificatedRotationPlayer();
-                    LastPositionToMove = new Vector3(realWayToPlayer[m_actualIndexList].y, _distanceUpPlayerInTheWay, realWayToPlayer[m_actualIndexList].x);
-
-                    StartCoroutine(MovementDicePlayer());
-                }
+               // yield return new WaitForSeconds(timeSpeedToMove * 2);
+                print("Estoy deteniendo el movimiento");
+                StartCoroutine(MovementDicePlayer());
             }
             else
             {
+                print("Estoy moviendo " + stopMoveAroundBoard);
+                m_countMoveDice++;
+                //move
+
+                if (realWayToPlayer.Count > m_actualIndexList + 1)
+                {
+                    m_actualIndexList++;
+                }
+                else
+                {
+                    CompleteRoundWay();
+                    m_actualIndexList = 0;
+                }
+
+                VerificatedRotationPlayer();
+                LastPositionToMove = new Vector3(realWayToPlayer[m_actualIndexList].y, _distanceUpPlayerInTheWay, realWayToPlayer[m_actualIndexList].x);
+
+
+                //                
                 CompletePathMove();
-                print("Estoy en la posición: " + realWayToPlayer[m_actualIndexList].y + " z: " + realWayToPlayer[m_actualIndexList].x);
+
+
+                print("Voy hacia: " + realWayToPlayer[m_actualIndexList].y + " z: " + realWayToPlayer[m_actualIndexList].x);
+
+                if (!stopMoveAroundBoard) {
+                    UpdateAnimatorPlayer();
+                }
+
+                //repeting cycle
+                StartCoroutine(MovementDicePlayer());
             }
         }
 
@@ -107,7 +106,7 @@ namespace General
         }
 
         public virtual void CompleteRoundWay() {
-            completeRoundBoolMove = true;
+            stopMoveAroundBoard = true;
         }
     }
 }

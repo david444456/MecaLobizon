@@ -63,14 +63,13 @@ namespace PrincipalMap
                 }
 
                 audioSource.Stop();
-                print("El condicional del update" + (navMeshAgent.remainingDistance));
                 newMovement = false;
                 UpdateAnimatorPlayer();
                 controlGameMap.FinishPath();
             }
         }
 
-        public override void NewMovementPlayer(int value)
+        public void NewMovementPlayer(int value)
         {
             PlayerData.playerData.lastIndexPositionInMap = value;
             LastPositionToMove = new Vector3( realWayToPlayer[value].x, _distanceUpPlayerInTheWay, realWayToPlayer[value].y);
