@@ -3911,7 +3911,7 @@ MonoBehaviour:
   regionalEventWinMenu: {fileID: 11400000, guid: 5c545e69e6271d04394b46b11db0e165, type: 2}
   regionalEventLostMenu: {fileID: 11400000, guid: 7c18cee270c1a104089cc58affbe440e, type: 2}
   initialHealth: 15
-  initialCoin: 50
+  initialCoin: 0
   actualCoin: 0
 --- !u!114 &907885678
 MonoBehaviour:
@@ -7165,6 +7165,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5.199997
       objectReference: {fileID: 0}
+    - target: {fileID: 8884013771463875780, guid: 07a3481e42ad20448a06a31c7fe03cea, type: 3}
+      propertyPath: m_Size
+      value: 0.76969695
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884013771463875780, guid: 07a3481e42ad20448a06a31c7fe03cea, type: 3}
+      propertyPath: m_Value
+      value: 1.0000004
+      objectReference: {fileID: 0}
     - target: {fileID: 8884013771694771566, guid: 07a3481e42ad20448a06a31c7fe03cea, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7205,6 +7213,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 8884013771968920884, guid: 07a3481e42ad20448a06a31c7fe03cea, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8884013771996541626, guid: 07a3481e42ad20448a06a31c7fe03cea, type: 3}
       propertyPath: m_Sprite
       value: 
