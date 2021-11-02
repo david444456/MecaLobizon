@@ -52,10 +52,9 @@ namespace Lobizon.Runner
             {
                 if (isRunning)
                 {
-
                     if (!doubleJump || onGround)
 
-                        Rig.AddForce(new Vector2(0, jumpForce));
+                    Rig.AddForce(new Vector2(0, jumpForce));
                     GetComponent<AudioSource>().Play();
                     anim.SetBool("isGrounded", onGround);
                     if (!doubleJump && !onGround)
